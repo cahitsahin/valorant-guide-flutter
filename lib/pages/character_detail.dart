@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:valorant/models/characters.dart';
 import 'file:///D:/flutter/valorant/lib/services/style.dart';
+import 'package:valorant/widgets/character_widget.dart';
 
 class CharacterDetailScreen extends StatefulWidget {
   final Character character;
@@ -23,11 +24,11 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
         fit: StackFit.expand,
         children: <Widget>[
           Hero(
-            tag: "background-${widget.character.brimstone.abilities}",
+            tag: "background-${widget.character.key}",
             child: DecoratedBox(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: widget.character.colors,
+                  colors: [getColorFromHex(widget.character.primaryColor),getColorFromHex(widget.character.secondaryColor)],
                   begin: Alignment.topRight,
                   end: Alignment.bottomLeft,
                 ),
@@ -52,7 +53,7 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                   ),
                 ),
                 Hero(
-                  tag: "image-${widget.character.name}",
+                  tag: "image-${widget.character.key}",
                   child: Align(
                     alignment: Alignment.topRight,
                     child: Image.asset(
@@ -62,7 +63,7 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                   ),
                 ),
                 Hero(
-                  tag: "name-${widget.character.name}",
+                  tag: "name-${widget.character.key}",
                   child: Material(
                     color: Colors.transparent,
                     child: Container(
@@ -70,7 +71,7 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 24, vertical: 8),
                         child: Text(
-                          widget.character.name,
+                          widget.character.key,
                           style: AppTheme.heading,
                         ),
                       ),

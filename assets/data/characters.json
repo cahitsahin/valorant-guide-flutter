@@ -1,5 +1,5 @@
-{
-  "Breach": {
+[
+   {
     "type": "Attacker",
     "description": "Valorant Breach Signature Ability available at the start of the round called Fault Line Equip a seismic blast. Hold Fire to increase the distance. Release to set off the quake, dazing all players in its zone and in a line up to the zone. You also have an Ultimate Ability called Rolling Thunder, which charges up from kills, you can also purchase two more abilities called Aftershock and Flash Point between rounds.",
     "key": "Breach",
@@ -58,48 +58,52 @@
       "Guardian",
       "Phantom"
     ],
-    "abilities": [
-      {
-        "type": "ability1",
-        "name": "Aftershock",
-        "description": [
-          "Equip a fusion charge. Fire the charge to set a slow-acting burst through the wall. The burst does heavy damage to anyone caught in its area."
-        ],
-        "cost": "100",
-        "charges": 1
-      },
-      {
-        "type": "ability2",
-        "name": "Flash Point",
-        "description": [
-          "Equip a blinding charge. Fire the charge to set a last-acting burst through the wall. The charge detonates to blind all players looking at it.",
-          "Flash Duration: 2 Seconds"
-        ],
-        "cost": "200",
-        "charges": 1
-      },
-      {
-        "type": "signature",
-        "name": "Fault Line",
-        "description": [
-          "Equip a seismic blast. Hold Fire to increase the distance. Release to set off the quake, dazing all players in its zone and in a line up to the zone.",
-          "Stun Duration: 3 Seconds"
-        ],
-        "cost": "Free",
-        "charges": 1
-      },
-      {
-        "type": "ultimate",
-        "name": "Rolling Thunder",
-        "description": [
-          "Equip a seismic charge. Fire to send a cascading quake through all terrain in a large cone. The quake dazes and knocks up anyone caught in it."
-        ],
-        "cost": "7 Points",
-        "charges": 1
-      }
-    ]
+     "abilities": [
+       {
+         "type": "ability1",
+         "name": "Aftershock",
+         "imagePath" : "assets/images/Breach_Aftershock.png",
+         "description": [
+           "Equip a fusion charge. Fire the charge to set a slow-acting burst through the wall. The burst does heavy damage to anyone caught in its area."
+         ],
+         "cost": "100",
+         "charges": 1
+       },
+       {
+         "type": "ability2",
+         "name": "Flash Point",
+         "imagePath" : "assets/images/Breach_Flash_Point.png",
+         "description": [
+           "Equip a blinding charge. Fire the charge to set a last-acting burst through the wall. The charge detonates to blind all players looking at it.",
+           "Flash Duration: 2 Seconds"
+         ],
+         "cost": "200",
+         "charges": 1
+       },
+       {
+         "type": "signature",
+         "name": "Fault Line",
+         "imagePath" : "assets/images/Breach_Fault_Line.png",
+         "description": [
+           "Equip a seismic blast. Hold Fire to increase the distance. Release to set off the quake, dazing all players in its zone and in a line up to the zone.",
+           "Stun Duration: 3 Seconds"
+         ],
+         "cost": "Free",
+         "charges": 1
+       },
+       {
+         "type": "ultimate",
+         "name": "Rolling Thunder",
+         "imagePath" : "assets/images/Breach_Rolling_Thunder.png",
+         "description": [
+           "Equip a seismic charge. Fire to send a cascading quake through all terrain in a large cone. The quake dazes and knocks up anyone caught in it."
+         ],
+         "cost": "7 Points",
+         "charges": 1
+       }
+     ]
   },
-  "Brimstone": {
+   {
     "type": "Attacker",
     "key": "Brimstone",
     "description": "Valorant Brimstone Signature Ability available at the start of the round called Sky Smoke Equip a tactical map. Fire to set locations where Brimstone's smoke clouds will land. Alternate Fire to confirm, launching long-lasting smoke clouds that block vision in the selected area. You also have an Ultimate Ability called Orbital Strike, which charges up from kills, you can also purchase two more abilities called Incendiary and Stim Beacon between rounds.",
@@ -161,7 +165,8 @@
     "abilities": [
       {
         "type": "ability1",
-        "name": "Aftershock",
+        "name": "Incendiary",
+        "imagePath" : "assets/images/Brimstone_Incendiary.png",
         "description": [
           "Equip a fusion charge. Fire the charge to set a slow-acting burst through the wall. The burst does heavy damage to anyone caught in its area."
         ],
@@ -170,7 +175,8 @@
       },
       {
         "type": "ability2",
-        "name": "Flash Point",
+        "name": "Stim Beacon",
+        "imagePath" : "assets/images/Brimstone_Stim_Beacon.png",
         "description": [
           "Equip a blinding charge. Fire the charge to set a last-acting burst through the wall. The charge detonates to blind all players looking at it.",
           "Flash Duration: 2 Seconds"
@@ -180,7 +186,8 @@
       },
       {
         "type": "signature",
-        "name": "Fault Line",
+        "name": "Sky Smoke",
+        "imagePath" : "assets/images/Brimstone_Sky_Smoke.png",
         "description": [
           "Equip a seismic blast. Hold Fire to increase the distance. Release to set off the quake, dazing all players in its zone and in a line up to the zone.",
           "Stun Duration: 3 Seconds"
@@ -191,6 +198,7 @@
       {
         "type": "ultimate",
         "name": "Rolling Thunder",
+        "imagePath" : "assets/images/Breach_Rolling_Thunder.png",
         "description": [
           "Equip a seismic charge. Fire to send a cascading quake through all terrain in a large cone. The quake dazes and knocks up anyone caught in it."
         ],
@@ -199,4 +207,4 @@
       }
     ]
   }
-}
+]

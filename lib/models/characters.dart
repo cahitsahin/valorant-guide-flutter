@@ -1,30 +1,4 @@
-class Character{
-  Breach breach;
-  Breach brimstone;
-
-  Character({this.breach, this.brimstone});
-
-  Character.fromJson(Map<String, dynamic> json) {
-    breach =
-    json['Breach'] != null ? new Breach.fromJson(json['Breach']) : null;
-    brimstone = json['Brimstone'] != null
-        ? new Breach.fromJson(json['Brimstone'])
-        : null;
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.breach != null) {
-      data['Breach'] = this.breach.toJson();
-    }
-    if (this.brimstone != null) {
-      data['Brimstone'] = this.brimstone.toJson();
-    }
-    return data;
-  }
-}
-
-class Breach {
+class Character {
   String type;
   String description;
   String key;
@@ -36,7 +10,7 @@ class Breach {
   List<String> bestWeapon;
   List<Abilities> abilities;
 
-  Breach(
+  Character(
       {this.type,
         this.description,
         this.key,
@@ -48,7 +22,7 @@ class Breach {
         this.bestWeapon,
         this.abilities});
 
-  Breach.fromJson(Map<String, dynamic> json) {
+  Character.fromJson(Map<String, dynamic> json) {
     type = json['type'];
     description = json['description'];
     key = json['key'];
@@ -116,15 +90,23 @@ class BestTeamComp {
 class Abilities {
   String type;
   String name;
+  String imagePath;
   List<String> description;
   String cost;
   int charges;
 
-  Abilities({this.type, this.name, this.description, this.cost, this.charges});
+  Abilities(
+      {this.type,
+        this.name,
+        this.imagePath,
+        this.description,
+        this.cost,
+        this.charges});
 
   Abilities.fromJson(Map<String, dynamic> json) {
     type = json['type'];
     name = json['name'];
+    imagePath = json['imagePath'];
     description = json['description'].cast<String>();
     cost = json['cost'];
     charges = json['charges'];
@@ -134,6 +116,7 @@ class Abilities {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['type'] = this.type;
     data['name'] = this.name;
+    data['imagePath'] = this.imagePath;
     data['description'] = this.description;
     data['cost'] = this.cost;
     data['charges'] = this.charges;

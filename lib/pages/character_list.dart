@@ -15,6 +15,10 @@ class _CharacterListState extends State<CharacterList> {
   int currentPage = 0;
   List<Character> allCharacter;
 
+  void getData()async{
+    allCharacter = await readJsonObject();
+  }
+
   @override
   void initState() {
     super.initState();
@@ -22,11 +26,11 @@ class _CharacterListState extends State<CharacterList> {
       viewportFraction: 0.9,
       initialPage: currentPage,
     );
-    allCharacter = readJsonObject() as List<Character>;
   }
 
   @override
   Widget build(BuildContext context) {
+    getData();
     return Scaffold(
       drawer: AppDrawer(),
       appBar: AppBar(

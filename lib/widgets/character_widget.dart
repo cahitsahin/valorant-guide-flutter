@@ -55,36 +55,36 @@ class CharacterWidget extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
                         CircleAvatar(
-                          backgroundColor: character.name,
+                          backgroundColor: getColorFromHex(character.primaryColor),
                           child: Image.asset(
-                            character.ability1Image,
+                            character.abilities[0].imagePath,
                             color: Colors.white,
                             height: 35
                           ),
                           radius: 25*value,
                         ),
                         CircleAvatar(
-                          backgroundColor: character.colors[1],
+                          backgroundColor: getColorFromHex(character.primaryColor),
                           child: Image.asset(
-                            character.ability2Image,
+                            character.abilities[1].imagePath,
                             color: Colors.white,
                             height: 35,
                           ),
                           radius: 25*value,
                         ),
                         CircleAvatar(
-                          backgroundColor: character.colors[1],
+                          backgroundColor: getColorFromHex(character.primaryColor),
                           child: Image.asset(
-                            character.signatureImage,
+                            character.abilities[2].imagePath,
                             color: Colors.white,
                             height: 35,
                           ),
                           radius: 25*value,
                         ),
                         CircleAvatar(
-                          backgroundColor: character.colors[1],
+                          backgroundColor: getColorFromHex(character.primaryColor),
                           child: Image.asset(
-                            character.ultimateImage,
+                            character.abilities[3].imagePath,
                             color: Colors.white,
                             height: 35,
                           ),
@@ -99,13 +99,13 @@ class CharacterWidget extends StatelessWidget {
                   child: ClipPath(
                     clipper: CharacterCardBackgroundClipper(),
                     child: Hero(
-                      tag: "background-${character.name}",
+                      tag: "background-${character.key}",
                       child: Container(
                         height: 0.5 * screenHeight,
                         width: 0.9 * screenWidth,
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
-                            colors: character.colors,
+                            colors: [getColorFromHex(character.primaryColor),getColorFromHex(character.secondaryColor)],
                             begin: Alignment.topRight,
                             end: Alignment.bottomLeft,
                           ),
@@ -115,7 +115,7 @@ class CharacterWidget extends StatelessWidget {
                   ),
                 ),
                 Hero(
-                  tag: "image-${character.name}",
+                  tag: "image-${character.key}",
                   child: Align(
                     alignment: Alignment(0, -0.5),
                     child: Image.asset(
@@ -131,12 +131,12 @@ class CharacterWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Hero(
-                        tag: "name-${character.name}",
+                        tag: "name-${character.key}",
                         child: Material(
                           color: Colors.transparent,
                           child: Container(
                             child: Text(
-                              character.name,
+                              character.key,
                               style: AppTheme.heading,
                             ),
                           ),
