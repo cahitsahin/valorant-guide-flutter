@@ -3,8 +3,8 @@
     "type": "Attacker",
     "description": "Valorant Breach Signature Ability available at the start of the round called Fault Line Equip a seismic blast. Hold Fire to increase the distance. Release to set off the quake, dazing all players in its zone and in a line up to the zone. You also have an Ultimate Ability called Rolling Thunder, which charges up from kills, you can also purchase two more abilities called Aftershock and Flash Point between rounds.",
     "key": "Breach",
-    "imagePath": "assets/images/Breach.png",
-    "iconPath": "assets/images/Breach_Icon.png",
+    "imagePath": "assets/images/profileImages/Breach.png",
+    "iconPath": "assets/images/profileIcons/Breach_Icon.png",
     "primaryColor": "FFFF5722",
     "secondaryColor": "FFFFAB91",
     "bestTeamComp": [
@@ -62,7 +62,7 @@
        {
          "type": "ability1",
          "name": "Aftershock",
-         "imagePath" : "assets/images/Breach_Aftershock.png",
+         "imagePath" : "assets/images/abilityImages/Breach_Aftershock.png",
          "description": [
            "Equip a fusion charge. Fire the charge to set a slow-acting burst through the wall. The burst does heavy damage to anyone caught in its area."
          ],
@@ -72,7 +72,7 @@
        {
          "type": "ability2",
          "name": "Flash Point",
-         "imagePath" : "assets/images/Breach_Flash_Point.png",
+         "imagePath" : "assets/images/abilityImages/Breach_Flash_Point.png",
          "description": [
            "Equip a blinding charge. Fire the charge to set a last-acting burst through the wall. The charge detonates to blind all players looking at it.",
            "Flash Duration: 2 Seconds"
@@ -83,7 +83,7 @@
        {
          "type": "signature",
          "name": "Fault Line",
-         "imagePath" : "assets/images/Breach_Fault_Line.png",
+         "imagePath" : "assets/images/abilityImages/Breach_Fault_Line.png",
          "description": [
            "Equip a seismic blast. Hold Fire to increase the distance. Release to set off the quake, dazing all players in its zone and in a line up to the zone.",
            "Stun Duration: 3 Seconds"
@@ -94,7 +94,7 @@
        {
          "type": "ultimate",
          "name": "Rolling Thunder",
-         "imagePath" : "assets/images/Breach_Rolling_Thunder.png",
+         "imagePath" : "assets/images/abilityImages/Breach_Rolling_Thunder.png",
          "description": [
            "Equip a seismic charge. Fire to send a cascading quake through all terrain in a large cone. The quake dazes and knocks up anyone caught in it."
          ],
@@ -107,8 +107,8 @@
     "type": "Attacker",
     "key": "Brimstone",
     "description": "Valorant Brimstone Signature Ability available at the start of the round called Sky Smoke Equip a tactical map. Fire to set locations where Brimstone's smoke clouds will land. Alternate Fire to confirm, launching long-lasting smoke clouds that block vision in the selected area. You also have an Ultimate Ability called Orbital Strike, which charges up from kills, you can also purchase two more abilities called Incendiary and Stim Beacon between rounds.",
-    "imagePath": "assets/images/Brimstone.png",
-    "iconPath": "assets/images/Brimstone_Icon.png",
+    "imagePath": "assets/images/profileImages/Brimstone.png",
+    "iconPath": "assets/images/profileIcons/Brimstone_Icon.png",
     "primaryColor": "FFFF2222",
     "secondaryColor": "FFFFCD91",
     "bestTeamComp": [
@@ -166,7 +166,7 @@
       {
         "type": "ability1",
         "name": "Incendiary",
-        "imagePath" : "assets/images/Brimstone_Incendiary.png",
+        "imagePath" : "assets/images/abilityImages/Brimstone_Incendiary.png",
         "description": [
           "Equip a fusion charge. Fire the charge to set a slow-acting burst through the wall. The burst does heavy damage to anyone caught in its area."
         ],
@@ -176,7 +176,7 @@
       {
         "type": "ability2",
         "name": "Stim Beacon",
-        "imagePath" : "assets/images/Brimstone_Stim_Beacon.png",
+        "imagePath" : "assets/images/abilityImages/Brimstone_Stim_Beacon.png",
         "description": [
           "Equip a blinding charge. Fire the charge to set a last-acting burst through the wall. The charge detonates to blind all players looking at it.",
           "Flash Duration: 2 Seconds"
@@ -187,7 +187,7 @@
       {
         "type": "signature",
         "name": "Sky Smoke",
-        "imagePath" : "assets/images/Brimstone_Sky_Smoke.png",
+        "imagePath" : "assets/images/abilityImages/Brimstone_Sky_Smoke.png",
         "description": [
           "Equip a seismic blast. Hold Fire to increase the distance. Release to set off the quake, dazing all players in its zone and in a line up to the zone.",
           "Stun Duration: 3 Seconds"
@@ -198,7 +198,7 @@
       {
         "type": "ultimate",
         "name": "Rolling Thunder",
-        "imagePath" : "assets/images/Breach_Rolling_Thunder.png",
+        "imagePath" : "assets/images/abilityImages/Breach_Rolling_Thunder.png",
         "description": [
           "Equip a seismic charge. Fire to send a cascading quake through all terrain in a large cone. The quake dazes and knocks up anyone caught in it."
         ],
