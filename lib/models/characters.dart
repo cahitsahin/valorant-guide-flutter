@@ -91,7 +91,7 @@ class Abilities {
   String type;
   String name;
   String imagePath;
-  List<String> description;
+  String description;
   String cost;
   int charges;
 
@@ -107,7 +107,7 @@ class Abilities {
     type = json['type'];
     name = json['name'];
     imagePath = json['imagePath'];
-    description = json['description'].cast<String>();
+    description = json['description'];
     cost = json['cost'];
     charges = json['charges'];
   }
