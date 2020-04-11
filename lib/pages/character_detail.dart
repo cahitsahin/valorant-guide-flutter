@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:valorant/models/characters.dart';
 import 'package:valorant/services/style.dart';
 import 'package:valorant/widgets/character_abilities_widget.dart';
+import 'package:valorant/widgets/character_weapons_widget.dart';
 import 'package:valorant/widgets/character_widget.dart';
 
 class CharacterDetailScreen extends StatefulWidget {
@@ -84,7 +85,8 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                           child: Container(
                             child: Text(
                               widget.character.key,
-                              style: AppTheme.heading.copyWith(fontSize: 18),
+                              style: AppTheme.heading.copyWith(
+                                  fontSize: 18, fontWeight: FontWeight.w700),
                             ),
                           ),
                         ),
@@ -96,11 +98,37 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                     ],
                   ),
                 ),
-                Divider(
-                  height: 40,
-                  color: Colors.white70,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: Divider(
+                    height: 30,
+                    color: Colors.white70,
+                  ),
                 ),
-                CharacterAbilitiesWidget(character: widget.character,screenHeight: screenHeight,screenWidth: screenWidth,),
+                CharacterAbilitiesWidget(
+                  character: widget.character,
+                  screenHeight: screenHeight,
+                  screenWidth: screenWidth,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: Divider(
+                    height: 30,
+                    color: Colors.white70,
+                  ),
+                ),
+                for(int i=0;i<3;i++)Padding(
+                  padding: const EdgeInsets.only(bottom: 20),
+                  child: CharacterWeaponsWidget(
+                        character: widget.character,
+                        screenHeight: screenHeight,
+                        screenWidth: screenWidth),
+                ),
+
+
+                SizedBox(
+                  height: 100,
+                )
               ],
             ),
           ),
