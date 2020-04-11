@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:valorant/models/characters.dart';
-import 'file:///D:/flutter/valorant/lib/services/style.dart';
+import 'package:valorant/services/style.dart';
+import 'package:valorant/widgets/character_abilities_widget.dart';
 import 'package:valorant/widgets/character_widget.dart';
 
 class CharacterDetailScreen extends StatefulWidget {
@@ -28,7 +29,10 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
             child: DecoratedBox(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [getColorFromHex(widget.character.primaryColor),getColorFromHex(widget.character.secondaryColor)],
+                  colors: [
+                    getColorFromHex(widget.character.secondaryColor),
+                    getColorFromHex(widget.character.primaryColor)
+                  ],
                   begin: Alignment.topRight,
                   end: Alignment.bottomLeft,
                 ),
@@ -42,54 +46,64 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                 SizedBox(
                   height: 40,
                 ),
-                IconButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  iconSize: 32,
-                  icon: Icon(
-                    Icons.close,
-                    color: Colors.white.withOpacity(0.8),
-                  ),
-                ),
-                Hero(
-                  tag: "image-${widget.character.key}",
-                  child: Align(
-                    alignment: Alignment.topRight,
-                    child: Image.asset(
-                      widget.character.imagePath,
-                      height: screenHeight * 0.45,
-                    ),
-                  ),
-                ),
-                Hero(
-                  tag: "name-${widget.character.key}",
-                  child: Material(
-                    color: Colors.transparent,
-                    child: Container(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 24, vertical: 8),
-                        child: Text(
-                          widget.character.key,
-                          style: AppTheme.heading,
-                        ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      iconSize: 32,
+                      icon: Icon(
+                        Icons.close,
+                        color: Colors.white.withOpacity(0.8),
                       ),
                     ),
-                  ),
+                    Hero(
+                      tag: "image-${widget.character.key}",
+                      child: Image.asset(
+                        widget.character.imagePath,
+                        width: screenWidth * 0.6,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
                 ),
                 Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
-                  child: Text(
-                    widget.character.description,
-                    style: AppTheme.subHeading,
+                  padding: const EdgeInsets.only(left: 6, right: 6),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Hero(
+                        tag: "name-${widget.character.key}",
+                        child: Material(
+                          color: Colors.transparent,
+                          child: Container(
+                            child: Text(
+                              widget.character.key,
+                              style: AppTheme.heading.copyWith(fontSize: 18),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text(
+                        widget.character.description,
+                        style: AppTheme.subHeading.copyWith(fontSize: 14),
+                      ),
+                    ],
                   ),
                 ),
+                Divider(
+                  height: 40,
+                  color: Colors.white70,
+                ),
+                CharacterAbilitiesWidget(character: widget.character,screenHeight: screenHeight,screenWidth: screenWidth,),
               ],
             ),
           ),
-
         ],
       ),
     );

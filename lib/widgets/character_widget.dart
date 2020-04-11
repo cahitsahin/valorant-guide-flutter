@@ -105,7 +105,7 @@ class CharacterWidget extends StatelessWidget {
                         width: 0.9 * screenWidth,
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
-                            colors: [getColorFromHex(character.primaryColor),getColorFromHex(character.secondaryColor)],
+                            colors: [getColorFromHex(character.secondaryColor),getColorFromHex(character.primaryColor)],
                             begin: Alignment.topRight,
                             end: Alignment.bottomLeft,
                           ),
