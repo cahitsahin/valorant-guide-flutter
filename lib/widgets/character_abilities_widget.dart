@@ -15,13 +15,16 @@ class CharacterAbilitiesWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(left: 4),
-      height: screenHeight * 0.6,
+      height: screenHeight * 0.3,
       child: ListView.builder(
           itemCount: 4,
           controller: PageController(viewportFraction: 0.6),
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
             return Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+              ),
               child: Container(
                 width: screenWidth * 0.55,
                 child: Column(

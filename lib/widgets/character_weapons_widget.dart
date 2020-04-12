@@ -212,7 +212,7 @@ class CharacterWeaponsWidget extends StatelessWidget {
       onTap: () => _foldingCellKey?.currentState?.toggleFold(),
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(15),
           color: Colors.white,
         ),
         alignment: Alignment.center,

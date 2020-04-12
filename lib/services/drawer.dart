@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:valorant/pages/character_list.dart';
-import 'file:///D:/flutter/valorant/lib/services/style.dart';
+import 'package:valorant/services/style.dart';
 
 class AppDrawer extends StatelessWidget {
   @override
