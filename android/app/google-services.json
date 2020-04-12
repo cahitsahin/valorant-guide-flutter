@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "395615745507",
+    "firebase_url": "https://valorant-4bad4.firebaseio.com",
+    "project_id": "valorant-4bad4",
+    "storage_bucket": "valorant-4bad4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395615745507:android:5c5270b34b6bf775571cd6",
+        "android_client_info": {
+          "package_name": "com.hegira.valorant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "395615745507-g42jeevdduk4e66tqh34hhctr77spofe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hegira.valorant",
+            "certificate_hash": "0505b3630134fd71c9366fe222dec71b9e668c0b"
+          }
+        },
+        {
+          "client_id": "395615745507-qdkcobumkl55nju1ot2bio1umfuunbpq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-cgKtuKkk-b6BGSOSv9Q6bL8-cmLeeUs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "395615745507-qdkcobumkl55nju1ot2bio1umfuunbpq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
