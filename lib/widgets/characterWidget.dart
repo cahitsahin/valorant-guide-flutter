@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:valorant/models/characters.dart';
-import 'package:valorant/pages/character_detail.dart';
+import 'package:valorant/pages/characterDetail.dart';
 import 'package:valorant/services/style.dart';
 
 class CharacterWidget extends StatelessWidget {

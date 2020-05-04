@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:valorant/models/characters.dart';
 import 'package:valorant/services/style.dart';
-import 'package:valorant/widgets/character_abilities_widget.dart';
-import 'package:valorant/widgets/character_weapons_widget.dart';
-import 'package:valorant/widgets/character_widget.dart';
+import 'package:valorant/widgets/characterAbilitiesWidget.dart';
+import 'package:valorant/widgets/characterWeaponsWidget.dart';
+import 'package:valorant/widgets/characterWidget.dart';
 
 class CharacterDetailScreen extends StatefulWidget {
   final Character character;
@@ -117,15 +117,14 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                     color: Colors.white70,
                   ),
                 ),
-                for(int i=0;i<3;i++)Padding(
-                  padding: const EdgeInsets.only(bottom: 20),
-                  child: CharacterWeaponsWidget(
+                for (int i = 0; i < 3; i++)
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 20),
+                    child: CharacterWeaponsWidget(
                         character: widget.character,
                         screenHeight: screenHeight,
                         screenWidth: screenWidth),
-                ),
-
-
+                  ),
                 SizedBox(
                   height: 100,
                 )

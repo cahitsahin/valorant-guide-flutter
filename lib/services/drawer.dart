@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:valorant/pages/character_list.dart';
+import 'package:valorant/pages/characterList.dart';
+import 'package:valorant/pages/weaponList.dart';
 import 'package:valorant/services/style.dart';
 
 class AppDrawer extends StatelessWidget {
@@ -20,6 +21,18 @@ class AppDrawer extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => CharacterList(),
+                    ),
+                  );
+                }
+            ),
+            _createDrawerItem(
+                icon: Icons.videogame_asset,
+                text: 'Weapons',
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => WeaponList(),
                     ),
                   );
                 }
@@ -84,38 +97,4 @@ class AppDrawer extends StatelessWidget {
     );
   }
 
-}
-
-class MenuItem extends StatelessWidget {
-  final IconData icon;
-  final String title;
-  final Function onTap;
-
-  const MenuItem({Key key, this.icon, this.title, this.onTap}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Row(
-          children: <Widget>[
-            Icon(
-              icon,
-              color: Colors.pink,
-              size: 30,
-            ),
-            SizedBox(
-              width: 20,
-            ),
-            Text(
-              title,
-              style: TextStyle(fontWeight: FontWeight.w300, fontSize: 26, color: Colors.black),
-            )
-          ],
-        ),
-      ),
-    );
-  }
 }

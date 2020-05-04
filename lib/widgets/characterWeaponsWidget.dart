@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:valorant/models/characters.dart';
 import 'package:folding_cell/folding_cell.dart';
 import 'package:valorant/services/style.dart';
-import 'package:valorant/widgets/character_widget.dart';
+import 'package:valorant/widgets/characterWidget.dart';
 
 class CharacterWeaponsWidget extends StatelessWidget {
   final Character character;

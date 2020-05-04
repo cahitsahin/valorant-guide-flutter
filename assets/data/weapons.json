@@ -1,0 +1,482 @@
+[
+  {
+    "type": "Sidearm",
+    "description": "Valorant Classic is a Sidearm weapon type and costs Free credits to purchase. This gun has a magazine capacity of 12, and fire rate of 6.75 / 2.22 per second, with a Low wall penetration. If the enemy has no armor, you will deal 78 Head Damage, 26 Torso Damage, and 22 Leg/Arm Damage per bullet",
+    "key": "Classic",
+    "fireModes":[
+      {
+        "name": "Semi-Auto",
+        "rate": "6.75"
+      },
+      {
+        "name": "3 Burst",
+        "rate": "2.22"
+      }
+    ],
+    "imagePath": "assets/images/weaponImages/Classic.png",
+    "cost": "Free",
+    "capacity": "12",
+    "rate": "6.75 / 2.22",
+    "wallPenetration": "Low",
+    "distanceRate": [
+      {
+        "distance": "0-30m",
+        "head": "78",
+        "body": "26",
+        "leg": "22"
+      },
+      {
+        "distance": "30-50m",
+        "head": "66",
+        "body": "22",
+        "leg": "18"
+      }
+    ],
+    "otherSkin": [
+      "assets/images/weaponSkins/Classic_Dynasty.png",
+      "dwa"
+    ]
+  },
+
+
+  {
+    "type": "Shotgun",
+    "description": "Valorant Judge is a Shotgun weapon type and costs 1500 credits to purchase. This gun has a magazine capacity of 7, and fire rate of 3.5 per second, with a Medium wall penetration. If the enemy has no armor, you will deal 34 Head Damage, 17 Torso Damage, and 14 Leg/Arm Damage per bullet",
+    "key": "Judge",
+    "fireModes":[
+      {
+        "name": "Semi-Auto",
+        "rate": "3.5"
+      }
+    ],
+    "imagePath": "assets/images/weaponImages/Judge.png",
+    "cost": "1500",
+    "capacity": "7",
+    "rate": "3.5",
+    "wallPenetration": "Medium",
+    "distanceRate": [
+      {
+        "distance": "0-10m",
+        "head": "34",
+        "body": "17",
+        "leg": "14"
+      },
+      {
+        "distance": "10-15m",
+        "head": "26",
+        "body": "13",
+        "leg": "11"
+      },
+      {
+        "distance": "15-20m",
+        "head": "20",
+        "body": "10",
+        "leg": "9"
+      }
+    ],
+    "otherSkin": [
+        "assets/images/weaponSkins/Classic_Dynasty.png",
+        "daddy"
+    ]
+  },
+  {
+    "type": "Sidearm",
+    "description": "Valorant Classic is a Sidearm weapon type and costs Free credits to purchase. This gun has a magazine capacity of 12, and fire rate of 6.75 / 2.22 per second, with a Low wall penetration. If the enemy has no armor, you will deal 78 Head Damage, 26 Torso Damage, and 22 Leg/Arm Damage per bullet",
+    "key": "Classic",
+    "fireModes":[
+      {
+        "name": "Semi-Auto",
+        "rate": "6.75"
+      },
+      {
+        "name": "3 Burst",
+        "rate": "2.22"
+      }
+    ],
+    "imagePath": "assets/images/weaponImages/Classic.png",
+    "cost": "Free",
+    "capacity": "12",
+    "rate": "6.75 / 2.22",
+    "wallPenetration": "Low",
+    "distanceRate": [
+      {
+        "distance": "0-30m",
+        "head": "78",
+        "body": "26",
+        "leg": "22"
+      },
+      {
+        "distance": "30-50m",
+        "head": "66",
+        "body": "22",
+        "leg": "18"
+      }
+    ],
+    "otherSkin": [
+      "assets/images/weaponSkins/Classic_Dynasty.png",
+      "dwa"
+    ]
+  },
+
+
+  {
+    "type": "Shotgun",
+    "description": "Valorant Judge is a Shotgun weapon type and costs 1500 credits to purchase. This gun has a magazine capacity of 7, and fire rate of 3.5 per second, with a Medium wall penetration. If the enemy has no armor, you will deal 34 Head Damage, 17 Torso Damage, and 14 Leg/Arm Damage per bullet",
+    "key": "Judge",
+    "fireModes":[
+      {
+        "name": "Semi-Auto",
+        "rate": "3.5"
+      }
+    ],
+    "imagePath": "assets/images/weaponImages/Judge.png",
+    "cost": "1500",
+    "capacity": "7",
+    "rate": "3.5",
+    "wallPenetration": "Medium",
+    "distanceRate": [
+      {
+        "distance": "0-10m",
+        "head": "34",
+        "body": "17",
+        "leg": "14"
+      },
+      {
+        "distance": "10-15m",
+        "head": "26",
+        "body": "13",
+        "leg": "11"
+      },
+      {
+        "distance": "15-20m",
+        "head": "20",
+        "body": "10",
+        "leg": "9"
+      }
+    ],
+    "otherSkin": [
+      "assets/images/weaponSkins/Classic_Dynasty.png",
+      "daddy"
+    ]
+  },
+  {
+    "type": "Sidearm",
+    "description": "Valorant Classic is a Sidearm weapon type and costs Free credits to purchase. This gun has a magazine capacity of 12, and fire rate of 6.75 / 2.22 per second, with a Low wall penetration. If the enemy has no armor, you will deal 78 Head Damage, 26 Torso Damage, and 22 Leg/Arm Damage per bullet",
+    "key": "Classic",
+    "fireModes":[
+      {
+        "name": "Semi-Auto",
+        "rate": "6.75"
+      },
+      {
+        "name": "3 Burst",
+        "rate": "2.22"
+      }
+    ],
+    "imagePath": "assets/images/weaponImages/Classic.png",
+    "cost": "Free",
+    "capacity": "12",
+    "rate": "6.75 / 2.22",
+    "wallPenetration": "Low",
+    "distanceRate": [
+      {
+        "distance": "0-30m",
+        "head": "78",
+        "body": "26",
+        "leg": "22"
+      },
+      {
+        "distance": "30-50m",
+        "head": "66",
+        "body": "22",
+        "leg": "18"
+      }
+    ],
+    "otherSkin": [
+      "assets/images/weaponSkins/Classic_Dynasty.png",
+      "dwa"
+    ]
+  },
+
+
+  {
+    "type": "Shotgun",
+    "description": "Valorant Judge is a Shotgun weapon type and costs 1500 credits to purchase. This gun has a magazine capacity of 7, and fire rate of 3.5 per second, with a Medium wall penetration. If the enemy has no armor, you will deal 34 Head Damage, 17 Torso Damage, and 14 Leg/Arm Damage per bullet",
+    "key": "Judge",
+    "fireModes":[
+      {
+        "name": "Semi-Auto",
+        "rate": "3.5"
+      }
+    ],
+    "imagePath": "assets/images/weaponImages/Judge.png",
+    "cost": "1500",
+    "capacity": "7",
+    "rate": "3.5",
+    "wallPenetration": "Medium",
+    "distanceRate": [
+      {
+        "distance": "0-10m",
+        "head": "34",
+        "body": "17",
+        "leg": "14"
+      },
+      {
+        "distance": "10-15m",
+        "head": "26",
+        "body": "13",
+        "leg": "11"
+      },
+      {
+        "distance": "15-20m",
+        "head": "20",
+        "body": "10",
+        "leg": "9"
+      }
+    ],
+    "otherSkin": [
+      "assets/images/weaponSkins/Classic_Dynasty.png",
+      "daddy"
+    ]
+  },
+  {
+    "type": "Sidearm",
+    "description": "Valorant Classic is a Sidearm weapon type and costs Free credits to purchase. This gun has a magazine capacity of 12, and fire rate of 6.75 / 2.22 per second, with a Low wall penetration. If the enemy has no armor, you will deal 78 Head Damage, 26 Torso Damage, and 22 Leg/Arm Damage per bullet",
+    "key": "Classic",
+    "fireModes":[
+      {
+        "name": "Semi-Auto",
+        "rate": "6.75"
+      },
+      {
+        "name": "3 Burst",
+        "rate": "2.22"
+      }
+    ],
+    "imagePath": "assets/images/weaponImages/Classic.png",
+    "cost": "Free",
+    "capacity": "12",
+    "rate": "6.75 / 2.22",
+    "wallPenetration": "Low",
+    "distanceRate": [
+      {
+        "distance": "0-30m",
+        "head": "78",
+        "body": "26",
+        "leg": "22"
+      },
+      {
+        "distance": "30-50m",
+        "head": "66",
+        "body": "22",
+        "leg": "18"
+      }
+    ],
+    "otherSkin": [
+      "assets/images/weaponSkins/Classic_Dynasty.png",
+      "dwa"
+    ]
+  },
+
+
+  {
+    "type": "Shotgun",
+    "description": "Valorant Judge is a Shotgun weapon type and costs 1500 credits to purchase. This gun has a magazine capacity of 7, and fire rate of 3.5 per second, with a Medium wall penetration. If the enemy has no armor, you will deal 34 Head Damage, 17 Torso Damage, and 14 Leg/Arm Damage per bullet",
+    "key": "Judge",
+    "fireModes":[
+      {
+        "name": "Semi-Auto",
+        "rate": "3.5"
+      }
+    ],
+    "imagePath": "assets/images/weaponImages/Judge.png",
+    "cost": "1500",
+    "capacity": "7",
+    "rate": "3.5",
+    "wallPenetration": "Medium",
+    "distanceRate": [
+      {
+        "distance": "0-10m",
+        "head": "34",
+        "body": "17",
+        "leg": "14"
+      },
+      {
+        "distance": "10-15m",
+        "head": "26",
+        "body": "13",
+        "leg": "11"
+      },
+      {
+        "distance": "15-20m",
+        "head": "20",
+        "body": "10",
+        "leg": "9"
+      }
+    ],
+    "otherSkin": [
+      "assets/images/weaponSkins/Classic_Dynasty.png",
+      "daddy"
+    ]
+  },
+  {
+    "type": "Sidearm",
+    "description": "Valorant Classic is a Sidearm weapon type and costs Free credits to purchase. This gun has a magazine capacity of 12, and fire rate of 6.75 / 2.22 per second, with a Low wall penetration. If the enemy has no armor, you will deal 78 Head Damage, 26 Torso Damage, and 22 Leg/Arm Damage per bullet",
+    "key": "Classic",
+    "fireModes":[
+      {
+        "name": "Semi-Auto",
+        "rate": "6.75"
+      },
+      {
+        "name": "3 Burst",
+        "rate": "2.22"
+      }
+    ],
+    "imagePath": "assets/images/weaponImages/Classic.png",
+    "cost": "Free",
+    "capacity": "12",
+    "rate": "6.75 / 2.22",
+    "wallPenetration": "Low",
+    "distanceRate": [
+      {
+        "distance": "0-30m",
+        "head": "78",
+        "body": "26",
+        "leg": "22"
+      },
+      {
+        "distance": "30-50m",
+        "head": "66",
+        "body": "22",
+        "leg": "18"
+      }
+    ],
+    "otherSkin": [
+      "assets/images/weaponSkins/Classic_Dynasty.png",
+      "dwa"
+    ]
+  },
+
+
+  {
+    "type": "Shotgun",
+    "description": "Valorant Judge is a Shotgun weapon type and costs 1500 credits to purchase. This gun has a magazine capacity of 7, and fire rate of 3.5 per second, with a Medium wall penetration. If the enemy has no armor, you will deal 34 Head Damage, 17 Torso Damage, and 14 Leg/Arm Damage per bullet",
+    "key": "Judge",
+    "fireModes":[
+      {
+        "name": "Semi-Auto",
+        "rate": "3.5"
+      }
+    ],
+    "imagePath": "assets/images/weaponImages/Judge.png",
+    "cost": "1500",
+    "capacity": "7",
+    "rate": "3.5",
+    "wallPenetration": "Medium",
+    "distanceRate": [
+      {
+        "distance": "0-10m",
+        "head": "34",
+        "body": "17",
+        "leg": "14"
+      },
+      {
+        "distance": "10-15m",
+        "head": "26",
+        "body": "13",
+        "leg": "11"
+      },
+      {
+        "distance": "15-20m",
+        "head": "20",
+        "body": "10",
+        "leg": "9"
+      }
+    ],
+    "otherSkin": [
+      "assets/images/weaponSkins/Classic_Dynasty.png",
+      "daddy"
+    ]
+  }, {
+  "type": "Sidearm",
+  "description": "Valorant Classic is a Sidearm weapon type and costs Free credits to purchase. This gun has a magazine capacity of 12, and fire rate of 6.75 / 2.22 per second, with a Low wall penetration. If the enemy has no armor, you will deal 78 Head Damage, 26 Torso Damage, and 22 Leg/Arm Damage per bullet",
+  "key": "Classic",
+  "fireModes":[
+    {
+      "name": "Semi-Auto",
+      "rate": "6.75"
+    },
+    {
+      "name": "3 Burst",
+      "rate": "2.22"
+    }
+  ],
+  "imagePath": "assets/images/weaponImages/Classic.png",
+  "cost": "Free",
+  "capacity": "12",
+  "rate": "6.75 / 2.22",
+  "wallPenetration": "Low",
+  "distanceRate": [
+    {
+      "distance": "0-30m",
+      "head": "78",
+      "body": "26",
+      "leg": "22"
+    },
+    {
+      "distance": "30-50m",
+      "head": "66",
+      "body": "22",
+      "leg": "18"
+    }
+  ],
+  "otherSkin": [
+    "assets/images/weaponSkins/Classic_Dynasty.png",
+    "dwa"
+  ]
+},
+
+
+  {
+    "type": "Shotgun",
+    "description": "Valorant Judge is a Shotgun weapon type and costs 1500 credits to purchase. This gun has a magazine capacity of 7, and fire rate of 3.5 per second, with a Medium wall penetration. If the enemy has no armor, you will deal 34 Head Damage, 17 Torso Damage, and 14 Leg/Arm Damage per bullet",
+    "key": "Judge",
+    "fireModes":[
+      {
+        "name": "Semi-Auto",
+        "rate": "3.5"
+      }
+    ],
+    "imagePath": "assets/images/weaponImages/Judge.png",
+    "cost": "1500",
+    "capacity": "7",
+    "rate": "3.5",
+    "wallPenetration": "Medium",
+    "distanceRate": [
+      {
+        "distance": "0-10m",
+        "head": "34",
+        "body": "17",
+        "leg": "14"
+      },
+      {
+        "distance": "10-15m",
+        "head": "26",
+        "body": "13",
+        "leg": "11"
+      },
+      {
+        "distance": "15-20m",
+        "head": "20",
+        "body": "10",
+        "leg": "9"
+      }
+    ],
+    "otherSkin": [
+      "assets/images/weaponSkins/Classic_Dynasty.png",
+      "daddy"
+    ]
+  }
+
+]

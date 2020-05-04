@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:valorant/models/characters.dart';
 import 'package:valorant/services/style.dart';
-import 'character_widget.dart';
+import 'characterWidget.dart';
 
 class CharacterAbilitiesWidget extends StatelessWidget {
   final Character character;
@@ -15,7 +15,7 @@ class CharacterAbilitiesWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(left: 4),
-      height: screenHeight * 0.3,
+      height: screenHeight * 0.5,
       child: ListView.builder(
           itemCount: 4,
           controller: PageController(viewportFraction: 0.6),
