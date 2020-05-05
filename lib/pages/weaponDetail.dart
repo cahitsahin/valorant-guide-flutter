@@ -1,13 +1,114 @@
 import 'package:flutter/material.dart';
+import 'package:valorant/models/weapon.dart';
+import 'package:valorant/services/style.dart';
+import 'package:valorant/widgets/characterWidget.dart';
 
-class WeaponDetail extends StatefulWidget {
+class WeaponDetailScreen extends StatefulWidget {
+
+  final Weapon weapon;
+
+  const WeaponDetailScreen({Key key, this.weapon}) : super(key: key);
+
   @override
-  _WeaponDetailState createState() => _WeaponDetailState();
+  _WeaponDetailScreenState createState() => _WeaponDetailScreenState();
 }
 
-class _WeaponDetailState extends State<WeaponDetail> {
+class _WeaponDetailScreenState extends State<WeaponDetailScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    final screenWidth = MediaQuery
+        .of(context)
+        .size
+        .width;
+
+    return Scaffold(
+      body: Stack(
+        fit: StackFit.expand,
+        children: <Widget>[
+          Hero(
+            tag: "ground-${widget.weapon.key}",
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    getColorFromHex(widget.weapon.secondaryColor),
+                    getColorFromHex(widget.weapon.primaryColor)
+                  ],
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                ),
+              ),
+            ),
+          ),
+          SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                SizedBox(
+                  height: 40,
+                ),
+                IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  iconSize: 32,
+                  icon: Icon(
+                    Icons.close,
+                    color: Colors.white.withOpacity(0.8),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Center(
+                  child: Hero(
+                    tag: "image-${widget.weapon.key}",
+                    child: Image.asset(
+                      widget.weapon.imagePath,
+                      width: screenWidth * 0.8,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 6, right: 6),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Hero(
+                        tag: "name-${widget.weapon.key}",
+                        child: Material(
+                          color: Colors.transparent,
+                          child: Container(
+                            child: Text(
+                              widget.weapon.key,
+                              style: AppTheme.heading.copyWith(
+                                  fontSize: 22, fontWeight: FontWeight.w700),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text(
+                        widget.weapon.description,
+                        style: AppTheme.subHeading.copyWith(fontSize: 14),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: Divider(
+                    height: 30,
+                    color: Colors.white70,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

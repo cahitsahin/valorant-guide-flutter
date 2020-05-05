@@ -8,6 +8,8 @@ class Weapon {
   String capacity;
   String rate;
   String wallPenetration;
+  String primaryColor;
+  String secondaryColor;
   List<DistanceRate> distanceRate;
   List<String> otherSkin;
 
@@ -21,6 +23,8 @@ class Weapon {
         this.capacity,
         this.rate,
         this.wallPenetration,
+        this.primaryColor,
+        this.secondaryColor,
         this.distanceRate,
         this.otherSkin});
 
@@ -39,6 +43,8 @@ class Weapon {
     capacity = json['capacity'];
     rate = json['rate'];
     wallPenetration = json['wallPenetration'];
+    primaryColor = json['primaryColor'];
+    secondaryColor = json['secondaryColor'];
     if (json['distanceRate'] != null) {
       distanceRate = new List<DistanceRate>();
       json['distanceRate'].forEach((v) {
@@ -61,6 +67,8 @@ class Weapon {
     data['capacity'] = this.capacity;
     data['rate'] = this.rate;
     data['wallPenetration'] = this.wallPenetration;
+    data['primaryColor'] = this.primaryColor;
+    data['secondaryColor'] = this.secondaryColor;
     if (this.distanceRate != null) {
       data['distanceRate'] = this.distanceRate.map((v) => v.toJson()).toList();
     }

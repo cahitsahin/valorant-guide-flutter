@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:valorant/data/weaponsData.dart';
 import 'package:valorant/models/weapon.dart';
+import 'package:valorant/pages/weaponDetail.dart';
 import 'package:valorant/services/drawer.dart';
 import 'package:valorant/services/style.dart';
+import 'package:valorant/widgets/characterWidget.dart';
 
 class WeaponList extends StatefulWidget {
   @override
@@ -31,7 +33,7 @@ class _WeaponListState extends State<WeaponList> {
                 child: ListView.builder(
               itemCount: allWeapons.length,
               itemBuilder: (BuildContext context, int index) {
-                return weaponsRow(context, index, allWeapons[index]);
+                return weaponsRow(allWeapons[index],context);
               },
             ));
           } else {
@@ -45,61 +47,77 @@ class _WeaponListState extends State<WeaponList> {
   }
 }
 
-Widget weaponsRow(BuildContext context, int index, Weapon weapon) {
-  Color cardColor = Colors.white;
-  if (weapon.type == "Sidearm") {
-    cardColor = Colors.cyan[200];
-  } else if (weapon.type == "Shotgun") {
-    cardColor = Colors.lime[200];
-  }
+Widget weaponsRow(Weapon weapon,BuildContext context) {
   return Padding(
     padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 4, bottom: 4),
     child: Card(
-      shadowColor: cardColor,
-      elevation: 5,
-      child: Container(
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [Colors.white, cardColor]),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16),
-          child: ListTile(
-            title: Text(
-              weapon.key,
-              style: AppTheme.subHeading.copyWith(
-                  color: Colors.black,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10)
+      ),
+      shadowColor: getColorFromHex(weapon.primaryColor),
+      elevation: 8,
+      child: InkWell(
+        onTap: () {
+          Navigator.push(
+            context,
+            PageRouteBuilder(
+              transitionDuration: Duration(milliseconds: 350),
+              pageBuilder: (context, _, __) =>
+                  WeaponDetailScreen(weapon: weapon),
             ),
-            leading: Image.asset(
-              weapon.imagePath,
-              width: 100,
-            ),
-            subtitle: Text(
-              weapon.type,
-              style: AppTheme.subHeading.copyWith(
-                  color: Colors.black45,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400),
-            ),
-            trailing: Column(
-              children: [
-                Image.asset(
-                  "assets/images/profileIcons/cost.png",
-                  height: 30,
+          );
+        },
+        child: Container(
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            gradient: LinearGradient(colors: [getColorFromHex(weapon.secondaryColor), getColorFromHex(weapon.primaryColor)]),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16),
+            child: Material(
+              child: ListTile(
+                title: Text(
+                  weapon.key,
+                  style: AppTheme.heading.copyWith(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w800),
                 ),
-                SizedBox(
-                  height: 5,
-                ),
-                Text(
-                  weapon.cost,
-                  style: AppTheme.subHeading.copyWith(
-                    color: Colors.black45,
-                    fontSize: 16,
+                leading: Hero(
+                  tag: "image-${weapon.key}",
+                  child: Image.asset(
+                    weapon.imagePath,
+                    width: 100,
                   ),
                 ),
-              ],
+                subtitle: Text(
+                  weapon.type,
+                  style: AppTheme.subHeading.copyWith(
+                      color: Colors.black87,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400),
+                ),
+                trailing: Column(
+                  children: [
+                    Image.asset(
+                      "assets/images/profileIcons/cost.png",
+                      color: Colors.black,
+                      height: 30,
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      weapon.cost,
+                      style: AppTheme.subHeading.copyWith(
+                        color: Colors.black,
+                        fontSize: 14,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ),
         ),
