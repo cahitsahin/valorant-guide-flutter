@@ -33,6 +33,7 @@ class _CharacterListState extends State<CharacterList> {
           "Characters",
           style: AppTheme.subHeading.copyWith(color: Colors.black),
         ),
+        foregroundColor: Colors.black,
       ),
       body: FutureBuilder(
         future: CharacterData().readJsonObject(),
