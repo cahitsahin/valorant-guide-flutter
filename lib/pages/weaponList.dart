@@ -23,6 +23,7 @@ class _WeaponListState extends State<WeaponList> {
           "Weapons",
           style: AppTheme.subHeading.copyWith(color: Colors.black),
         ),
+        foregroundColor: Colors.black,
       ),
       body: FutureBuilder(
         future: WeaponData().readJsonObject(),
