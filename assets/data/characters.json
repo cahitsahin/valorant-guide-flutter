@@ -188,13 +188,107 @@
     ]
   },
   {
+    "type": "Duelist",
+    "key": "Jett",
+    "description": "Valorant Jett Signature Ability available at the start of the round called Tailwind Instantly propel in the direction she is moving. If Jett is standing still, she will propel forward. You also have an Ultimate Ability called Blade Storm, which charges up from kills, you can also purchase two more abilities called Cloudburst and Updraft between rounds.\n",
+    "imagePath": "assets/images/profileImages/Jett.png",
+    "iconPath": "assets/images/profileIcons/Jett_Icon.png",
+    "primaryColor": "FF0086c3",
+    "secondaryColor": "FF73e8ff",
+    "bestTeamComp": [
+      {
+        "names": [
+          "Breach",
+          "Brimstone",
+          "Cypher",
+          "Sage",
+          "Sova"
+        ],
+        "rankAttack": 4,
+        "rankDefend": 5
+      },
+      {
+        "names": [
+          "Breach",
+          "Brimstone",
+          "Jett",
+          "Sage",
+          "Phoenix"
+        ],
+        "rankAttack": 5,
+        "rankDefend": 4
+      },
+      {
+        "names": [
+          "Breach",
+          "Brimstone",
+          "Viper",
+          "Sage",
+          "Omen  "
+        ],
+        "rankAttack": 5,
+        "rankDefend": 3
+      },
+      {
+        "names": [
+          "Breach",
+          "Brimstone",
+          "Viper",
+          "Raze",
+          "Omen  "
+        ],
+        "rankAttack": 3,
+        "rankDefend": 4
+      }
+    ],
+    "bestWeapon": [
+      "Bulldog",
+      "Guardian",
+      "Phantom"
+    ],
+    "abilities": [
+      {
+        "type": "Ability 1",
+        "name": "Incendiary",
+        "imagePath": "assets/images/abilityImages/Brimstone_Incendiary.png",
+        "description": "Equip a fusion charge. Fire the charge to set a slow-acting burst through the wall. The burst does heavy damage to anyone caught in its area.",
+        "cost": "100",
+        "charges": 1
+      },
+      {
+        "type": "Ability 2",
+        "name": "Stim Beacon",
+        "imagePath": "assets/images/abilityImages/Brimstone_Stim_Beacon.png",
+        "description": "Equip a blinding charge. Fire the charge to set a last-acting burst through the wall. The charge detonates to blind all players looking at it.\n\nFlash Duration: 2 Seconds",
+        "cost": "200",
+        "charges": 1
+      },
+      {
+        "type": "Signature",
+        "name": "Sky Smoke",
+        "imagePath": "assets/images/abilityImages/Brimstone_Sky_Smoke.png",
+        "description": "Equip a seismic blast. Hold Fire to increase the distance. Release to set off the quake, dazing all players in its zone and in a line up to the zone.\n\nStun Duration: 3 Seconds",
+        "cost": "Free",
+        "charges": 1
+      },
+      {
+        "type": "Ultimate",
+        "name": "Rolling Thunder",
+        "imagePath": "assets/images/abilityImages/Breach_Rolling_Thunder.png",
+        "description": "Equip a seismic charge. Fire to send a cascading quake through all terrain in a large cone. The quake dazes and knocks up anyone caught in it.",
+        "cost": "7 Points",
+        "charges": 1
+      }
+    ]
+  },
+  {
     "type": "Sentinel",
     "key": "Cypher",
     "description": "Valorant Cypher Signature Ability available at the start of the round called Spycam Equip a spycam. Fire to place the spycam at the targeted location. REUSE this ability to take control of the camera's view. While in control of the camera. Fire to shoot a marking dart. This dart will reveal the location of any player struck by the dart. You also have an Ultimate Ability called Neural Theft, which charges up from kills, you can also purchase two more abilities called Trapwire and Cyber Cage between rounds.",
     "imagePath": "assets/images/profileImages/Cypher.png",
     "iconPath": "assets/images/profileIcons/Cypher_Icon.png",
-    "primaryColor": "FFFF7043",
-    "secondaryColor": "FFFFAB91",
+    "primaryColor": "FF4b636e",
+    "secondaryColor": "FFa7c0cd",
     "bestTeamComp": [
       {
         "names": [
