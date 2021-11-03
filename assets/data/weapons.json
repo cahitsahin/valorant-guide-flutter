@@ -18,8 +18,8 @@
     "capacity": "12",
     "rate": "6.75 / 2.22",
     "wallPenetration": "Low",
-    "primaryColor": "FF26A69A",
-    "secondaryColor": "FF80CBC4",
+    "primaryColor": "FF4b636e",
+    "secondaryColor": "FFa7c0cd",
     "distanceRate": [
       {
         "distance": "0-30m",
@@ -38,7 +38,48 @@
       "assets/images/weaponSkins/Classic_Dynasty.png",
       "dwa"
     ]
-  },
+  }, {
+  "type": "Sidearm",
+  "description": "Valorant Shorty is a Sidearm weapon type and costs 200 credits to purchase. This gun has a magazine capacity of 2, and fire rate of 3.3 per second, with a Low wall penetration. If the enemy has no armor, you will deal 36 Head Damage, 12 Torso Damage, and 10 Leg/Arm Damage per bullet\n",
+  "key": "Shorty",
+  "fireModes":[
+    {
+      "name": "Semi-Auto",
+      "rate": "3.3"
+    }
+  ],
+  "imagePath": "assets/images/weaponImages/Shorty.png",
+  "cost": "200",
+  "capacity": "7",
+  "rate": "3.3",
+  "wallPenetration": "Medium",
+  "primaryColor": "FF4b636e",
+  "secondaryColor": "FFa7c0cd",
+  "distanceRate": [
+    {
+      "distance": "0-9m",
+      "head": "34",
+      "body": "17",
+      "leg": "14"
+    },
+    {
+      "distance": "9-15m",
+      "head": "26",
+      "body": "13",
+      "leg": "11"
+    },
+    {
+      "distance": "15-20m",
+      "head": "20",
+      "body": "10",
+      "leg": "9"
+    }
+  ],
+  "otherSkin": [
+    "assets/images/weaponSkins/Classic_Dynasty.png",
+    "daddy"
+  ]
+},
 
 
   {
@@ -84,48 +125,6 @@
     ]
   },
   {
-    "type": "Sidearm",
-    "description": "Valorant Shorty is a Sidearm weapon type and costs 200 credits to purchase. This gun has a magazine capacity of 2, and fire rate of 3.3 per second, with a Low wall penetration. If the enemy has no armor, you will deal 36 Head Damage, 12 Torso Damage, and 10 Leg/Arm Damage per bullet\n",
-    "key": "Shorty",
-    "fireModes":[
-      {
-        "name": "Semi-Auto",
-        "rate": "3.3"
-      }
-    ],
-    "imagePath": "assets/images/weaponImages/Shorty.png",
-    "cost": "200",
-    "capacity": "7",
-    "rate": "3.3",
-    "wallPenetration": "Medium",
-    "primaryColor": "FFFF7043",
-    "secondaryColor": "FFFFAB91",
-    "distanceRate": [
-      {
-        "distance": "0-9m",
-        "head": "34",
-        "body": "17",
-        "leg": "14"
-      },
-      {
-        "distance": "9-15m",
-        "head": "26",
-        "body": "13",
-        "leg": "11"
-      },
-      {
-        "distance": "15-20m",
-        "head": "20",
-        "body": "10",
-        "leg": "9"
-      }
-    ],
-    "otherSkin": [
-      "assets/images/weaponSkins/Classic_Dynasty.png",
-      "daddy"
-    ]
-  },
-  {
     "type": "SMG",
     "description": "Valorant Spectre is a SMG weapon type and costs 1600 credits to purchase. This gun has a magazine capacity of 30, and fire rate of 13.33 / 12 per second, with a Medium wall penetration. If the enemy has no armor, you will deal 78 Head Damage, 26 Torso Damage, and 22 Leg/Arm Damage per bullet\n",
     "key": "Spectre",
@@ -134,13 +133,13 @@
 
       }
     ],
-    "imagePath": "assets/images/weaponImages/Shorty.png",
-    "cost": "200",
-    "capacity": "7",
+    "imagePath": "assets/images/weaponImages/Spectre.png",
+    "cost": "1600",
+    "capacity": "30",
     "rate": "3.3",
     "wallPenetration": "Medium",
-    "primaryColor": "FFFF7043",
-    "secondaryColor": "FFFFAB91",
+    "primaryColor": "FF26A69A",
+    "secondaryColor": "FF80CBC4",
     "distanceRate": [
       {
         "distance": "0-9m",

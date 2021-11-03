@@ -103,6 +103,29 @@ class _WeaponDetailScreenState extends State<WeaponDetailScreen> {
                     height: 30,
                     color: Colors.white70,
                   ),
+                ),Padding(
+                  padding: const EdgeInsets.only(left: 6, right: 6),
+                  child: Container(
+                    padding: EdgeInsets.only(left: 4),
+                    height: 0.5,
+                    child: ListView.builder(
+                        itemCount: widget.weapon.otherSkin.length,
+                        controller: PageController(viewportFraction: 0.6),
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, index) {
+                          return Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            child: Container(
+                              width: screenWidth * 0.55,
+                              child: Image.asset(
+                                widget.weapon.otherSkin[index]
+                              ),
+                            ),
+                          );
+                        }),
+                  ),
                 ),
               ],
             ),

@@ -55,7 +55,7 @@ flutter:
     - assets/images/abilityImages/
     - assets/images/weaponIcons/
     - assets/images/weaponImages/
-
+    - assets/images/weaponSkins/
     - assets/data/characters.json
     - assets/data/weapons.json
   #   - images/a_dot_ham.jpeg
