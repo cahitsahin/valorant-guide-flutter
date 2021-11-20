@@ -4,7 +4,6 @@ import 'package:valorant/services/style.dart';
 import 'package:valorant/widgets/characterWidget.dart';
 
 class WeaponDetailScreen extends StatefulWidget {
-
   final Weapon weapon;
 
   const WeaponDetailScreen({Key key, this.weapon}) : super(key: key);
@@ -16,10 +15,8 @@ class WeaponDetailScreen extends StatefulWidget {
 class _WeaponDetailScreenState extends State<WeaponDetailScreen> {
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery
-        .of(context)
-        .size
-        .width;
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
       body: Stack(
@@ -103,11 +100,25 @@ class _WeaponDetailScreenState extends State<WeaponDetailScreen> {
                     height: 30,
                     color: Colors.white70,
                   ),
-                ),Padding(
-                  padding: const EdgeInsets.only(left: 6, right: 6),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 12, right: 6),
+                  child: Material(
+                    color: Colors.transparent,
+                    child: Container(
+                      child: Text(
+                        "Other Skin",
+                        style: AppTheme.heading.copyWith(
+                            fontSize: 18, fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 6, right: 6, top: 6),
                   child: Container(
                     padding: EdgeInsets.only(left: 4),
-                    height: 0.5,
+                    height: screenHeight * 0.30,
                     child: ListView.builder(
                         itemCount: widget.weapon.otherSkin.length,
                         controller: PageController(viewportFraction: 0.6),
@@ -118,10 +129,9 @@ class _WeaponDetailScreenState extends State<WeaponDetailScreen> {
                               borderRadius: BorderRadius.circular(15.0),
                             ),
                             child: Container(
-                              width: screenWidth * 0.55,
-                              child: Image.asset(
-                                widget.weapon.otherSkin[index]
-                              ),
+                              width: screenWidth * 0.65,
+                              child:
+                                  Image.asset(widget.weapon.otherSkin[index]),
                             ),
                           );
                         }),

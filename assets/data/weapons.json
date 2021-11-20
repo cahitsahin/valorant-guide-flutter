@@ -35,8 +35,7 @@
       }
     ],
     "otherSkin": [
-      "assets/images/weaponSkins/Classic_Dynasty.png",
-      "dwa"
+      "assets/images/weaponSkins/Classic_Dynasty.png"
     ]
   }, {
   "type": "Sidearm",
@@ -120,8 +119,7 @@
       }
     ],
     "otherSkin": [
-        "assets/images/weaponSkins/Classic_Dynasty.png",
-        "daddy"
+        "assets/images/weaponSkins/Classic_Dynasty.png"
     ]
   },
   {

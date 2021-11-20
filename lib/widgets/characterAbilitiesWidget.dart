@@ -15,7 +15,7 @@ class CharacterAbilitiesWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(left: 4),
-      height: screenHeight * 0.5,
+      height: screenHeight * 0.4,
       child: ListView.builder(
           itemCount: 4,
           controller: PageController(viewportFraction: 0.6),
