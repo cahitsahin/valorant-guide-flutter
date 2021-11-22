@@ -95,14 +95,7 @@ class _WeaponDetailScreenState extends State<WeaponDetailScreen> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Divider(
-                    height: 30,
-                    color: Colors.white70,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 12, right: 6),
+                  padding: const EdgeInsets.only(left: 6, right: 6),
                   child: Material(
                     color: Colors.transparent,
                     child: Container(
@@ -115,9 +108,16 @@ class _WeaponDetailScreenState extends State<WeaponDetailScreen> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 6, right: 6, top: 6),
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: Divider(
+                    height: 16,
+                    color: Colors.white70,
+                  ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.only( top: 6),
                   child: Container(
-                    padding: EdgeInsets.only(left: 4),
                     height: screenHeight * 0.30,
                     child: ListView.builder(
                         itemCount: widget.weapon.otherSkin.length,

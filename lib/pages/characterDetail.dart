@@ -99,9 +99,22 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                   ),
                 ),
                 Padding(
+                  padding: const EdgeInsets.only(left: 6, right: 6,top: 12),
+                  child: Material(
+                    color: Colors.transparent,
+                    child: Container(
+                      child: Text(
+                        "Abilities",
+                        style: AppTheme.heading.copyWith(
+                            fontSize: 16, fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
                   child: Divider(
-                    height: 30,
+                    height: 16,
                     color: Colors.white70,
                   ),
                 ),
@@ -111,19 +124,42 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                   screenWidth: screenWidth,
                 ),
                 Padding(
+                  padding: const EdgeInsets.only(left: 6, right: 6,top: 12),
+                  child: Material(
+                    color: Colors.transparent,
+                    child: Container(
+                      child: Text(
+                        "Favorite Guns",
+                        style: AppTheme.heading.copyWith(
+                            fontSize: 16, fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
                   child: Divider(
                     height: 30,
                     color: Colors.white70,
                   ),
                 ),
-                for (int i = 0; i < 3; i++)
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 20),
-                    child: CharacterWeaponsWidget(
-                        character: widget.character,
-                        screenHeight: screenHeight,
-                        screenWidth: screenWidth),
+
+                  Container(
+                    width: screenWidth,
+                    height: screenHeight*0.4,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                        itemCount: widget.character.bestWeapon.length,
+                        controller: PageController(viewportFraction: 0.8),
+                        itemBuilder: (context, index){
+                      return Padding(
+                        padding: const EdgeInsets.only(bottom: 20),
+                        child: CharacterWeaponsWidget(
+                            character: widget.character,
+                            screenHeight: screenHeight,
+                            screenWidth: screenWidth),
+                      );
+                    }),
                   ),
                 SizedBox(
                   height: 100,

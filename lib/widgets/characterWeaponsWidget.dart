@@ -23,7 +23,7 @@ class CharacterWeaponsWidget extends StatelessWidget {
       frontWidget: _buildFrontWidget(),
       innerTopWidget: _buildInnerTopWidget(),
       innerBottomWidget: _buildInnerBottomWidget(),
-      cellSize: Size(screenWidth, 125),
+      cellSize: Size(screenWidth*0.8, 125),
       padding: EdgeInsets.symmetric(horizontal: 10),
       animationDuration: Duration(milliseconds: 300),
     );
