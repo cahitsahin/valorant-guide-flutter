@@ -7,6 +7,7 @@ import 'package:valorant/services/style.dart';
 
 class CharacterWidget extends StatelessWidget {
   final Character character;
+  final List<Character> characters;
   final List<Weapon> weapons;
   final PageController pageController;
   final int currentPage;
@@ -16,7 +17,7 @@ class CharacterWidget extends StatelessWidget {
     this.character,
     this.pageController,
     this.currentPage,
-    this.weapons,
+    this.weapons, this.characters,
   }) : super(key: key);
 
   @override
@@ -36,7 +37,7 @@ class CharacterWidget extends StatelessWidget {
             PageRouteBuilder(
               transitionDuration: Duration(milliseconds: 350),
               pageBuilder: (context, _, __) =>
-                  CharacterDetailScreen(character: character, weapons: weapons),
+                  CharacterDetailScreen(character: character, weapons: weapons,characters: characters,),
             ),
           );
         },

@@ -55,6 +55,7 @@ class _CharacterListState extends State<CharacterList> {
                         for (var i = 0; i < allCharacter.length; i++)
                           CharacterWidget(
                               character: allCharacter[i],
+                              characters: allCharacter,
                               weapons : allWeapons,
                               pageController: _pageController,
                               currentPage: i),
