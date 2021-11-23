@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:valorant/models/characters.dart';
 import 'package:folding_cell/folding_cell.dart';
+import 'package:valorant/models/weapon.dart';
 import 'package:valorant/services/style.dart';
 import 'package:valorant/widgets/characterWidget.dart';
 
@@ -9,9 +10,10 @@ class CharacterWeaponsWidget extends StatelessWidget {
   final Character character;
   final double screenHeight;
   final double screenWidth;
+  final Weapon weapon;
 
   CharacterWeaponsWidget(
-      {Key key, this.character, this.screenHeight, this.screenWidth})
+      {Key key, this.character, this.screenHeight, this.screenWidth,this.weapon})
       : super(key: key);
 
   var _foldingCellKey = GlobalKey<SimpleFoldingCellState>();
@@ -42,18 +44,18 @@ class CharacterWeaponsWidget extends StatelessWidget {
         ),
         child: ListTile(
             title: Text(
-              "Bulldog",
+              weapon.key,
               style: AppTheme.subHeading.copyWith(
                   color: Colors.black,
                   fontSize: 16,
                   fontWeight: FontWeight.w600),
             ),
             leading: Image.asset(
-              "assets/images/weaponImages/Bulldog.png",
+              weapon.imagePath,
               width: screenWidth * 0.3,
             ),
             subtitle: Text(
-              "Rifle",
+              weapon.type,
               style: AppTheme.subHeading.copyWith(
                   color: Colors.grey,
                   fontSize: 14,
@@ -70,7 +72,7 @@ class CharacterWeaponsWidget extends StatelessWidget {
                   height: 5,
                 ),
                 Text(
-                  "2100",
+                  weapon.cost,
                   style: AppTheme.subHeading.copyWith(
                     color: Colors.grey,
                     fontSize: 16,
@@ -217,7 +219,7 @@ class CharacterWeaponsWidget extends StatelessWidget {
         ),
         alignment: Alignment.center,
         child: Image.asset(
-          "assets/images/weaponImages/Bulldog.png",
+          weapon.imagePath,
           width: screenWidth * 0.5,
         ),
       ),

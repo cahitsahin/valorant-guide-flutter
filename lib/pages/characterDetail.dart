@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:valorant/models/characters.dart';
+import 'package:valorant/models/weapon.dart';
 import 'package:valorant/services/style.dart';
 import 'package:valorant/widgets/characterAbilitiesWidget.dart';
 import 'package:valorant/widgets/characterWeaponsWidget.dart';
@@ -8,14 +9,23 @@ import 'package:valorant/widgets/characterWidget.dart';
 
 class CharacterDetailScreen extends StatefulWidget {
   final Character character;
+  final List<Weapon> weapons;
 
-  CharacterDetailScreen({Key key, this.character}) : super(key: key);
+  CharacterDetailScreen({Key key, this.character, this.weapons}) : super(key: key);
 
   @override
   _CharacterDetailScreenState createState() => _CharacterDetailScreenState();
 }
 
 class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
+  List<Weapon> favouriteWeapons;
+  @override
+  void initState() {
+    super.initState();
+    favouriteWeapons = <Weapon>[];
+    getFavouriteWeapons();
+  }
+
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
@@ -149,13 +159,14 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                     height: screenHeight*0.4,
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
-                        itemCount: widget.character.bestWeapon.length,
+                        itemCount: favouriteWeapons.length,
                         controller: PageController(viewportFraction: 0.8),
                         itemBuilder: (context, index){
                       return Padding(
                         padding: const EdgeInsets.only(bottom: 20),
                         child: CharacterWeaponsWidget(
                             character: widget.character,
+                            weapon: favouriteWeapons[index],
                             screenHeight: screenHeight,
                             screenWidth: screenWidth),
                       );
@@ -163,6 +174,7 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                   ),
                 SizedBox(
                   height: 100,
+
                 )
               ],
             ),
@@ -170,5 +182,28 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
         ],
       ),
     );
+
+  }
+  void getFavouriteWeapons(){
+
+
+    print(widget.character.bestWeapon.toString());
+
+    for(int i=0;i<widget.weapons.length;i++){
+      if(widget.weapons[i].key.contains(widget.character.bestWeapon[0])){
+      favouriteWeapons.add(widget.weapons[i]);
+      }
+      if(widget.weapons[i].key.contains(widget.character.bestWeapon[1])){
+        favouriteWeapons.add(widget.weapons[i]);
+      }
+      if(widget.weapons[i].key.contains(widget.character.bestWeapon[2])){
+        favouriteWeapons.add(widget.weapons[i]);
+      }
+    }
+
+    for(int i=0;i<favouriteWeapons.length;i++){
+      print(favouriteWeapons[i].key.toString());}
+
+    print(favouriteWeapons.length);
   }
 }

@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:valorant/models/characters.dart';
+import 'package:valorant/models/weapon.dart';
 import 'package:valorant/pages/characterDetail.dart';
 import 'package:valorant/services/style.dart';
 
 class CharacterWidget extends StatelessWidget {
   final Character character;
+  final List<Weapon> weapons;
   final PageController pageController;
   final int currentPage;
 
@@ -14,6 +16,7 @@ class CharacterWidget extends StatelessWidget {
     this.character,
     this.pageController,
     this.currentPage,
+    this.weapons,
   }) : super(key: key);
 
   @override
@@ -33,7 +36,7 @@ class CharacterWidget extends StatelessWidget {
             PageRouteBuilder(
               transitionDuration: Duration(milliseconds: 350),
               pageBuilder: (context, _, __) =>
-                  CharacterDetailScreen(character: character),
+                  CharacterDetailScreen(character: character, weapons: weapons),
             ),
           );
         },

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:valorant/data/charactersData.dart';
+import 'package:valorant/data/weaponsData.dart';
 import 'package:valorant/models/characters.dart';
+import 'package:valorant/models/weapon.dart';
 import 'package:valorant/services/drawer.dart';
 import 'package:valorant/services/style.dart';
 import 'package:valorant/widgets/characterWidget.dart';
@@ -14,6 +16,7 @@ class _CharacterListState extends State<CharacterList> {
   PageController _pageController;
   int currentPage = 0;
   List<Character> allCharacter;
+  List<Weapon> allWeapons;
 
   @override
   void initState() {
@@ -36,10 +39,11 @@ class _CharacterListState extends State<CharacterList> {
         foregroundColor: Colors.black,
       ),
       body: FutureBuilder(
-        future: CharacterData().readJsonObject(),
-        builder: (context, result) {
-          if (result.hasData) {
-            allCharacter = result.data;
+        future: Future.wait([CharacterData().readJsonObject(),WeaponData().readJsonObject()]),
+        builder: (context, AsyncSnapshot<List<dynamic>> snapshot) {
+          if (snapshot.hasData) {
+            allCharacter = snapshot.data[0];
+            allWeapons = snapshot.data[1];
             return SafeArea(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -51,6 +55,7 @@ class _CharacterListState extends State<CharacterList> {
                         for (var i = 0; i < allCharacter.length; i++)
                           CharacterWidget(
                               character: allCharacter[i],
+                              weapons : allWeapons,
                               pageController: _pageController,
                               currentPage: i),
                       ],
