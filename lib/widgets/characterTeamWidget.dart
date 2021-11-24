@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:valorant/models/characters.dart';
+import 'package:valorant/services/style.dart';
 
 
 class CharacterTeamWidget extends StatefulWidget {
@@ -25,63 +26,36 @@ class _CharacterTeamWidgetState extends State<CharacterTeamWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(4.0),
       child: Card(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                CircleAvatar(
-                  radius: 30,
-                  child: Image.asset( widget.team[0].iconPath,),
-                ),
-                Text(widget.team[0].key)
-              ],
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                CircleAvatar(
-                  radius: 30,
-
-                  child: Image.asset( widget.team[1].iconPath,),
-                ),
-                Text(widget.team[1].key)
-              ],
-            ),Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                CircleAvatar(
-                  radius: 30,
-
-                  child: Image.asset( widget.team[2].iconPath,),
-                ),
-                Text(widget.team[2].key)
-              ],
-            ),Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                CircleAvatar(
-                  radius: 30,
-
-                  child: Image.asset( widget.team[3].iconPath,),
-                ),
-                Text(widget.team[3].key)
-              ],
-            ),Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                CircleAvatar(
-                  radius: 30,
-
-                  child: Image.asset( widget.team[4].iconPath,),
-                ),
-                Text(widget.team[4].key)
-              ],
-            ),
-          ],
+        elevation: 10,
+        child: Container(
+          width: widget.screenWidth*0.9,
+          child: ListView.builder(
+            physics: NeverScrollableScrollPhysics(),
+            padding: EdgeInsets.all(4),
+            itemCount: 5,
+            scrollDirection: Axis.horizontal,
+            controller: PageController(viewportFraction: 0.9),
+            itemBuilder: (context, index) {
+             return  Row(
+               children: [
+                 Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      CircleAvatar(
+                        radius: 30,
+                        backgroundImage: AssetImage(widget.team[index].iconPath),
+                      ),
+                      Text(widget.team[index].key, style: AppTheme.subHeading.copyWith(
+                          fontSize: 12, color: Colors.black),)
+                    ],
+                 ),
+                 SizedBox(width: 10,)
+               ],
+             );
+            }
+          ),
         ),
       ),
     );

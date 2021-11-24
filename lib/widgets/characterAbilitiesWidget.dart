@@ -21,8 +21,9 @@ class CharacterAbilitiesWidget extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
             return Card(
+              elevation: 5,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
+                borderRadius: BorderRadius.circular(8.0),
               ),
               child: Container(
                 width: screenWidth * 0.55,

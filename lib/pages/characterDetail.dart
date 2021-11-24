@@ -202,7 +202,7 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                 ),
                 Container(
                   width: screenWidth,
-                  height: screenHeight*0.2,
+                  height: screenHeight*0.4,
                   child: ListView.builder(
                       scrollDirection: Axis.horizontal,
                       itemCount: favouriteWeapons.length,
@@ -218,9 +218,6 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                         );
                       }),
                 ),
-                SizedBox(
-                  height: 100,
-                )
               ],
             ),
           ),

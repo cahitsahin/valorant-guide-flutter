@@ -95,7 +95,7 @@ class _WeaponDetailScreenState extends State<WeaponDetailScreen> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 6, right: 6),
+                  padding: const EdgeInsets.only(left: 4, right: 4,top: 8),
                   child: Material(
                     color: Colors.transparent,
                     child: Container(
@@ -116,17 +116,19 @@ class _WeaponDetailScreenState extends State<WeaponDetailScreen> {
                 ),
 
                 Padding(
-                  padding: const EdgeInsets.only( top: 6),
+                  padding: const EdgeInsets.only( top: 4,left: 4),
                   child: Container(
-                    height: screenHeight * 0.30,
+                    color: Colors.transparent,
+                    height: screenHeight * 0.20,
                     child: ListView.builder(
                         itemCount: widget.weapon.otherSkin.length,
                         controller: PageController(viewportFraction: 0.6),
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) {
                           return Card(
+                            color: Colors.transparent,
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15.0),
+                              borderRadius: BorderRadius.circular(8.0),
                             ),
                             child: Container(
                               width: screenWidth * 0.65,

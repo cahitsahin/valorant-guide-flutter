@@ -13,8 +13,8 @@
           "Breach",
           "Brimstone",
           "Cypher",
-          "Sage",
-          "Sova"
+          "Viper",
+          "Jett"
         ],
         "rankAttack": 4,
         "rankDefend": 5
@@ -47,7 +47,7 @@
           "Brimstone",
           "Viper",
           "Raze",
-          "Omen  "
+          "Omen"
         ],
         "rankAttack": 3,
         "rankDefend": 4
@@ -198,7 +198,7 @@
     "bestTeamComp": [
       {
         "names": [
-          "Breach",
+          "Jett",
           "Brimstone",
           "Cypher",
           "Sage",
@@ -374,5 +374,98 @@
         "charges": 1
       }
     ]
-  }
+  },{
+  "type": "Controller",
+  "description": "Valorant Viper Signature Ability available at the start of the round called Toxic Screen Equip a gas emitter launcher. Fire to deploy a long line of gas emitters. Re-use the ability to create a tall wall of toxic gas at the cost of fuel. This ability can be re-used more than once. You also have an Ultimate Ability called Viper’s Pit, which charges up from kills, you can also purchase two more abilities called Snake Bite and Poison Cloud between rounds.\n",
+  "key": "Viper",
+  "imagePath": "assets/images/profileImages/Viper.png",
+  "iconPath": "assets/images/profileIcons/Viper_Icon.png",
+  "primaryColor": "FF26A69A",
+  "secondaryColor": "FF80CBC4",
+  "bestTeamComp": [
+    {
+      "names": [
+        "Breach",
+        "Brimstone",
+        "Cypher",
+        "Sage",
+        "Sova"
+      ],
+      "rankAttack": 4,
+      "rankDefend": 5
+    },
+    {
+      "names": [
+        "Breach",
+        "Brimstone",
+        "Jett",
+        "Sage",
+        "Phoenix"
+      ],
+      "rankAttack": 5,
+      "rankDefend": 4
+    },
+    {
+      "names": [
+        "Breach",
+        "Brimstone",
+        "Viper",
+        "Sage",
+        "Omen  "
+      ],
+      "rankAttack": 5,
+      "rankDefend": 3
+    },
+    {
+      "names": [
+        "Breach",
+        "Brimstone",
+        "Viper",
+        "Raze",
+        "Omen  "
+      ],
+      "rankAttack": 3,
+      "rankDefend": 4
+    }
+  ],
+  "bestWeapon": [
+    "Shorty",
+    "Judge",
+    "Spectre"
+  ],
+  "abilities": [
+    {
+      "type": "Ability 1",
+      "name": "Snake Bite",
+      "imagePath": "assets/images/abilityImages/Viper_Snake_Bite.png",
+      "description": "Equip a chemical launcher. Fire to launch a canister that shatters upon hitting the floor, creating a lingering chemical zone that damages and slows enemies.\nFire a projectile that explodes into a pool of damaging acid.",
+      "cost": "100",
+      "charges": 2
+    },
+    {
+      "type": "Ability 2",
+      "name": "Poison Cloud",
+      "imagePath": "assets/images/abilityImages/Viper_Poison_Cloud.png",
+      "description": "Equip a blinding charge. Fire the charge to set a last-acting burst through the wall. The charge detonates to blind all players looking at it.\n\nFlash Duration: 2 Seconds",
+      "cost": "200",
+      "charges": 1
+    },
+    {
+      "type": "Signature",
+      "name": "Fault Line",
+      "imagePath": "assets/images/abilityImages/Breach_Fault_Line.png",
+      "description": "Equip a seismic blast. Hold Fire to increase the distance. Release to set off the quake, dazing all players in its zone and in a line up to the zone.\n\nStun Duration: 3 Seconds",
+      "cost": "Free",
+      "charges": 1
+    },
+    {
+      "type": "Ultimate",
+      "name": "Rolling Thunder",
+      "imagePath": "assets/images/abilityImages/Breach_Rolling_Thunder.png",
+      "description": "Equip a seismic charge. Fire to send a cascading quake through all terrain in a large cone. The quake dazes and knocks up anyone caught in it.",
+      "cost": "7 Points",
+      "charges": 1
+    }
+  ]
+}
 ]
