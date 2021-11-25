@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:valorant/pages/characterList.dart';
+import 'package:valorant/pages/mapsList.dart';
 import 'package:valorant/pages/weaponList.dart';
 import 'package:valorant/services/style.dart';
 
@@ -26,13 +27,25 @@ class AppDrawer extends StatelessWidget {
                 }
             ),
             _createDrawerItem(
-                icon: Icons.videogame_asset,
+                icon: Icons.gps_fixed,
                 text: 'Weapons',
                 onTap: (){
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => WeaponList(),
+                    ),
+                  );
+                }
+            ),
+            _createDrawerItem(
+                icon: Icons.map,
+                text: 'Maps',
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MapsList(),
                     ),
                   );
                 }

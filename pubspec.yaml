@@ -56,8 +56,10 @@ flutter:
     - assets/images/weaponIcons/
     - assets/images/weaponImages/
     - assets/images/weaponSkins/
+    - assets/images/mapsImages/
     - assets/data/characters.json
     - assets/data/weapons.json
+    - assets/data/maps.json
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
