@@ -1,99 +1,20 @@
 [
   {
     "displayName": "Ascent",
-    "coordinates": "45°26'BF'N,12°20'Q'E",
+    "coordinates": "Ascent is the first ‘new’ map for Valorant, in that Haven, Bind and Split were all present in the beta of the game, and Ascent was added for launch, along with the new game mode, Spike Rush. It’s unlikely to be the last new map added either, with Riot’s hero shooter set to keep growing the longer it’s out. For now, though, Ascent helps refresh the small pool of maps on offer and brings some fresh ideas to the table.",
     "displayIcon": "assets/images/mapsImages/Ascent_Display_Icon.png",
-    "listViewIcon": "assets/images/mapsImages/Ascent_Listview_Icon.png",
-    "splash": "assets/images/mapsImages/Ascent_Splash.png",
-    "callouts": [
-      {
-        "regionName": "Tree",
-        "superRegionName": "A"
-      },
-      {
-        "regionName": "Lobby",
-        "superRegionName": "A"
-      },
-      {
-        "regionName": "Main",
-        "superRegionName": "A"
-      },
-      {
-        "regionName": "Window",
-        "superRegionName": "A"
-      },
-      {
-        "regionName": "Site",
-        "superRegionName": "A"
-      },
-      {
-        "regionName": "Spawn",
-        "superRegionName": "Attacker Side"
-      },
-      {
-        "regionName": "Lobby",
-        "superRegionName": "B"
-      },
-      {
-        "regionName": "Main",
-        "superRegionName": "B"
-      },
-      {
-        "regionName": "Boat House",
-        "superRegionName": "B"
-      },
-      {
-        "regionName": "Bottom",
-        "superRegionName": "Mid"
-      },
-      {
-        "regionName": "Site",
-        "superRegionName": "B"
-      },
-      {
-        "regionName": "Catwalk",
-        "superRegionName": "Mid"
-      },
-      {
-        "regionName": "Cubby",
-        "superRegionName": "Mid"
-      },
-      {
-        "regionName": "Spawn",
-        "superRegionName": "Defender Side"
-      },
-      {
-        "regionName": "Garden",
-        "superRegionName": "A"
-      },
-      {
-        "regionName": "Market",
-        "superRegionName": "Mid"
-      },
-      {
-        "regionName": "Courtyard",
-        "superRegionName": "Mid"
-      },
-      {
-        "regionName": "Link",
-        "superRegionName": "Mid"
-      },
-      {
-        "regionName": "Pizza",
-        "superRegionName": "Mid"
-      },
-      {
-        "regionName": "Rafters",
-        "superRegionName": "A"
-      },
-      {
-        "regionName": "Top",
-        "superRegionName": "Mid"
-      },
-      {
-        "regionName": "Wine",
-        "superRegionName": "A"
-      }
-    ]
+    "splash": "assets/images/mapsImages/Ascent_Splash.png"
+  },
+  {
+    "displayName": "Split",
+    "coordinates": "Split is the map for Valorant, in that Haven, Bind and Split were all present in the beta of the game, and Ascent was added for launch, along with the new game mode, Spike Rush. It’s unlikely to be the last new map added either, with Riot’s hero shooter set to keep growing the longer it’s out. For now, though, Ascent helps refresh the small pool of maps on offer and brings some fresh ideas to the table.",
+    "displayIcon": "assets/images/mapsImages/Split_Display_Icon.png",
+    "splash": "assets/images/mapsImages/Split_Splash.png"
+  },
+  {
+    "displayName": "Fracture",
+    "coordinates": "Fracture is map for Valorant, in that Haven, Bind and Split were all present in the beta of the game, and Ascent was added for launch, along with the new game mode, Spike Rush. It’s unlikely to be the last new map added either, with Riot’s hero shooter set to keep growing the longer it’s out. For now, though, Ascent helps refresh the small pool of maps on offer and brings some fresh ideas to the table.",
+    "displayIcon": "assets/images/mapsImages/Fracture_Display_Icon.png",
+    "splash": "assets/images/mapsImages/Fracture_Splash.png"
   }
 ]
