@@ -2,18 +2,18 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:valorant/data/mapsData.dart';
-import 'package:valorant/models/map.dart';
+import 'package:valorant/models/map/map.dart';
 import 'package:valorant/services/drawer.dart';
 import 'package:valorant/services/style.dart';
 
 class MapsList extends StatefulWidget {
-  const MapsList({Key key}) : super(key: key);
+  const MapsList({Key? key}) : super(key: key);
 
   @override
   _MapsListState createState() => _MapsListState();
 }
 
-List<Maps> allMaps;
+List<Maps> allMaps=[];
 
 class _MapsListState extends State<MapsList> {
   @override
@@ -30,9 +30,9 @@ class _MapsListState extends State<MapsList> {
       ),
       body: FutureBuilder(
         future: MapsData().readJsonObject(),
-        builder: (context, result) {
-          if (result.hasData) {
-            allMaps = result.data;
+        builder: (context, AsyncSnapshot<List<dynamic>> snapshot) {
+          if (snapshot.hasData) {
+            allMaps = snapshot.data?[0];
             return Padding(
               padding: const EdgeInsets.only(
                   top: 8.0, left: 8, right: 8, bottom: 48),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:valorant/models/characters.dart';
+import 'package:valorant/models/character/character/characters.dart';
 import 'package:valorant/services/style.dart';
 import 'characterWidget.dart';
 
@@ -9,7 +9,7 @@ class CharacterAbilitiesWidget extends StatelessWidget {
   final double screenWidth;
 
   CharacterAbilitiesWidget(
-      {this.character, this.screenHeight, this.screenWidth});
+      {required this.character, required this.screenHeight, required this.screenWidth});
 
   @override
   Widget build(BuildContext context) {

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:valorant/models/weapon.dart';
+import 'package:valorant/models/weapon/weapon/weapon.dart';
 import 'package:valorant/services/style.dart';
 import 'package:valorant/widgets/characterWidget.dart';
 
 class WeaponDetailScreen extends StatefulWidget {
   final Weapon weapon;
 
-  const WeaponDetailScreen({Key key, this.weapon}) : super(key: key);
+  const WeaponDetailScreen({Key? key, required this.weapon}) : super(key: key);
 
   @override
   _WeaponDetailScreenState createState() => _WeaponDetailScreenState();

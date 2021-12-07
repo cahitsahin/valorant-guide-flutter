@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:valorant/models/characters.dart';
-import 'package:valorant/models/weapon.dart';
+import 'package:valorant/models/character/character/characters.dart';
+import 'package:valorant/models/weapon/weapon/weapon.dart';
 import 'package:valorant/pages/characterDetail.dart';
 import 'package:valorant/services/style.dart';
 
@@ -13,11 +13,11 @@ class CharacterWidget extends StatelessWidget {
   final int currentPage;
 
   CharacterWidget({
-    Key key,
-    this.character,
-    this.pageController,
-    this.currentPage,
-    this.weapons, this.characters,
+    Key? key,
+    required this.character,
+    required this.pageController,
+    required this.currentPage,
+    required this.weapons, required this.characters,
   }) : super(key: key);
 
   @override
@@ -46,7 +46,7 @@ class CharacterWidget extends StatelessWidget {
           builder: (context, child) {
             double value =1;
             if(pageController.position.haveDimensions){
-              value = pageController.page - currentPage;
+              value = (pageController.page! - currentPage)!;
               value = (1-(value.abs()*0.6)).clamp(0.0,1.0);
             }
             return Stack(
@@ -170,6 +170,7 @@ Color getColorFromHex(String hexColor) {
   if (hexColor.length == 8) {
     return Color(int.parse("0x$hexColor"));
   }
+  else return Colors.red;
 }
 
 class CharacterCardBackgroundClipper extends CustomClipper<Path> {

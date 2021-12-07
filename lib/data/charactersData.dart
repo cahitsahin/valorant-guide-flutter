@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:valorant/models/characters.dart';
+import 'package:valorant/models/character/character/characters.dart';
 
 class CharacterData {
 

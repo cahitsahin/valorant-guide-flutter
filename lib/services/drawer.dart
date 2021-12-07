@@ -86,7 +86,7 @@ class AppDrawer extends StatelessWidget {
   }
 
   Widget _createDrawerItem(
-      {IconData icon, String text, GestureTapCallback onTap}) {
+      {required IconData icon, required String text, required GestureTapCallback onTap}) {
     return GestureDetector(
       onTap: onTap,
       child: Padding(

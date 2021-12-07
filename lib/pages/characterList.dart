@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:valorant/data/charactersData.dart';
 import 'package:valorant/data/weaponsData.dart';
-import 'package:valorant/models/characters.dart';
-import 'package:valorant/models/weapon.dart';
+import 'package:valorant/models/character/character/characters.dart';
+import 'package:valorant/models/weapon/weapon/weapon.dart';
 import 'package:valorant/services/drawer.dart';
 import 'package:valorant/services/style.dart';
 import 'package:valorant/widgets/characterWidget.dart';
@@ -13,10 +13,10 @@ class CharacterList extends StatefulWidget {
 }
 
 class _CharacterListState extends State<CharacterList> {
-  PageController _pageController;
+  PageController _pageController=PageController();
   int currentPage = 0;
-  List<Character> allCharacter;
-  List<Weapon> allWeapons;
+  List<Character> allCharacter=[];
+  List<Weapon> allWeapons=[];
 
   @override
   void initState() {
@@ -42,8 +42,8 @@ class _CharacterListState extends State<CharacterList> {
         future: Future.wait([CharacterData().readJsonObject(),WeaponData().readJsonObject()]),
         builder: (context, AsyncSnapshot<List<dynamic>> snapshot) {
           if (snapshot.hasData) {
-            allCharacter = snapshot.data[0];
-            allWeapons = snapshot.data[1];
+            allCharacter = snapshot.data![0];
+            allWeapons = snapshot.data![1];
             return SafeArea(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,7 +56,7 @@ class _CharacterListState extends State<CharacterList> {
                           CharacterWidget(
                               character: allCharacter[i],
                               characters: allCharacter,
-                              weapons : allWeapons,
+                              weapons: allWeapons,
                               pageController: _pageController,
                               currentPage: i),
                       ],

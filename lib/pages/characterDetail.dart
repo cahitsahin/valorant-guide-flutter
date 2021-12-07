@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:valorant/models/characters.dart';
-import 'package:valorant/models/weapon.dart';
+import 'package:valorant/models/character/character/characters.dart';
+import 'package:valorant/models/weapon/weapon/weapon.dart';
 import 'package:valorant/services/style.dart';
 import 'package:valorant/widgets/characterAbilitiesWidget.dart';
 import 'package:valorant/widgets/characterTeamWidget.dart';
@@ -13,7 +13,7 @@ class CharacterDetailScreen extends StatefulWidget {
   final List<Character> characters;
   final List<Weapon> weapons;
 
-  CharacterDetailScreen({Key key, this.character, this.weapons, this.characters})
+  CharacterDetailScreen({Key? key, required this.character, required this.weapons, required this.characters})
       : super(key: key);
 
   @override
@@ -21,8 +21,8 @@ class CharacterDetailScreen extends StatefulWidget {
 }
 
 class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
-  List<Weapon> favouriteWeapons;
-  List<Character> favouriteTeams;
+  late List<Weapon> favouriteWeapons;
+  late List<Character> favouriteTeams;
 
 
   @override
@@ -123,7 +123,7 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                     color: Colors.transparent,
                     child: Container(
                       child: Text(
-                        "Abilities",
+                        "abilities",
                         style: AppTheme.heading.copyWith(
                             fontSize: 16, fontWeight: FontWeight.w500),
                       ),
@@ -176,7 +176,7 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                               team: favouriteTeams,
                               character: widget.character,
                               screenHeight: screenHeight,
-                              screenWidth: screenWidth),
+                              screenWidth: screenWidth,),
                         );
                       }),
                 ),

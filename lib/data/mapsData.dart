@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:valorant/models/map.dart';
+import 'package:valorant/models/map/map.dart';
 
 class MapsData {
 

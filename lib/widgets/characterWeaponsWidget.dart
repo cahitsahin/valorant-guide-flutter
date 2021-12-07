@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:valorant/models/characters.dart';
+import 'package:valorant/models/character/character/characters.dart';
 import 'package:folding_cell/folding_cell.dart';
-import 'package:valorant/models/weapon.dart';
+import 'package:valorant/models/weapon/weapon/weapon.dart';
 import 'package:valorant/services/style.dart';
 import 'package:valorant/widgets/characterWidget.dart';
 
@@ -13,7 +13,7 @@ class CharacterWeaponsWidget extends StatelessWidget {
   final Weapon weapon;
 
   CharacterWeaponsWidget(
-      {Key key, this.character, this.screenHeight, this.screenWidth,this.weapon})
+      {Key? key, required this.character, required this.screenHeight, required this.screenWidth,required this.weapon})
       : super(key: key);
 
   var _foldingCellKey = GlobalKey<SimpleFoldingCellState>();

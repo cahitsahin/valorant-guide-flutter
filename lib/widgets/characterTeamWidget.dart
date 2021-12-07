@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:valorant/models/characters.dart';
+import 'package:valorant/models/character/character/characters.dart';
 import 'package:valorant/services/style.dart';
 
 
@@ -11,11 +11,11 @@ class CharacterTeamWidget extends StatefulWidget {
   final double screenWidth;
 
   CharacterTeamWidget(
-      {Key key,
-      this.character,
-      this.screenHeight,
-      this.screenWidth,
-      this.team})
+      { Key? key,
+      required this.character,
+      required this.screenHeight,
+      required this.screenWidth,
+      required this.team})
       : super(key: key);
 
   @override

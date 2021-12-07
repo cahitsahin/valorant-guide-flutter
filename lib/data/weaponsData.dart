@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:valorant/models/weapon.dart';
+import 'package:valorant/models/weapon/weapon/weapon.dart';
 
 class WeaponData {
 
