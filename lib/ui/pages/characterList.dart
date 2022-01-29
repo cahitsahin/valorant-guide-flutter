@@ -5,7 +5,7 @@ import 'package:valorant/models/character/character/characters.dart';
 import 'package:valorant/models/weapon/weapon/weapon.dart';
 import 'package:valorant/services/drawer.dart';
 import 'package:valorant/services/style.dart';
-import 'package:valorant/widgets/characterWidget.dart';
+import 'package:valorant/ui/widgets/characterWidget.dart';
 
 class CharacterList extends StatefulWidget {
   @override

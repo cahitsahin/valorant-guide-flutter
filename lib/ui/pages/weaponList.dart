@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:valorant/data/weaponsData.dart';
 import 'package:valorant/models/weapon/weapon/weapon.dart';
-import 'package:valorant/pages/weaponDetail.dart';
 import 'package:valorant/services/drawer.dart';
 import 'package:valorant/services/style.dart';
-import 'package:valorant/widgets/characterWidget.dart';
+import 'package:valorant/ui/pages/weaponDetail.dart';
+import 'package:valorant/ui/widgets/characterWidget.dart';
 
 class WeaponList extends StatefulWidget {
   @override
@@ -27,9 +27,9 @@ class _WeaponListState extends State<WeaponList> {
       ),
       body: FutureBuilder(
         future: WeaponData().readJsonObject(),
-        builder: (context, AsyncSnapshot<List<dynamic>> snapshot) {
+        builder: (context, AsyncSnapshot<List<Weapon>> snapshot) {
           if (snapshot.hasData) {
-            allWeapons = snapshot.data![0];
+            allWeapons = snapshot.data!;
             return SafeArea(
                 child: ListView.builder(
               itemCount: allWeapons.length,

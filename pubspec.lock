@@ -63,7 +63,7 @@ packages:
       name: build
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.1"
+    version: "2.2.1"
   build_config:
     dependency: transitive
     description:
@@ -91,7 +91,7 @@ packages:
       name: build_runner
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.5"
+    version: "2.1.7"
   build_runner_core:
     dependency: transitive
     description:
@@ -228,13 +228,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  folding_cell:
-    dependency: "direct main"
-    description:
-      name: folding_cell
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.2"
   freezed:
     dependency: "direct dev"
     description:
@@ -297,7 +290,7 @@ packages:
       name: injectable
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.5.0"
+    version: "1.5.3"
   injectable_generator:
     dependency: "direct dev"
     description:

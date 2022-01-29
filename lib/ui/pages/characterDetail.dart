@@ -3,10 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:valorant/models/character/character/characters.dart';
 import 'package:valorant/models/weapon/weapon/weapon.dart';
 import 'package:valorant/services/style.dart';
-import 'package:valorant/widgets/characterAbilitiesWidget.dart';
-import 'package:valorant/widgets/characterTeamWidget.dart';
-import 'package:valorant/widgets/characterWeaponsWidget.dart';
-import 'package:valorant/widgets/characterWidget.dart';
+import 'package:valorant/ui/widgets/characterAbilitiesWidget.dart';
+import 'package:valorant/ui/widgets/characterTeamWidget.dart';
+import 'package:valorant/ui/widgets/characterWidget.dart';
 
 class CharacterDetailScreen extends StatefulWidget {
   final Character character;
@@ -200,24 +199,24 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                     color: Colors.white70,
                   ),
                 ),
-                Container(
-                  width: screenWidth,
-                  height: screenHeight*0.4,
-                  child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: favouriteWeapons.length,
-                      controller: PageController(viewportFraction: 0.8),
-                      itemBuilder: (context, index) {
-                        return Padding(
-                          padding: const EdgeInsets.only(bottom: 20),
-                          child: CharacterWeaponsWidget(
-                              character: widget.character,
-                              weapon: favouriteWeapons[index],
-                              screenHeight: screenHeight,
-                              screenWidth: screenWidth),
-                        );
-                      }),
-                ),
+                // Container(
+                //   width: screenWidth,
+                //   height: screenHeight*0.4,
+                //   child: ListView.builder(
+                //       scrollDirection: Axis.horizontal,
+                //       itemCount: favouriteWeapons.length,
+                //       controller: PageController(viewportFraction: 0.8),
+                //       itemBuilder: (context, index) {
+                //         return Padding(
+                //           padding: const EdgeInsets.only(bottom: 20),
+                //           child: CharacterWeaponsWidget(
+                //               character: widget.character,
+                //               weapon: favouriteWeapons[index],
+                //               screenHeight: screenHeight,
+                //               screenWidth: screenWidth),
+                //         );
+                //       }),
+                // ),
               ],
             ),
           ),

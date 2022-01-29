@@ -6,6 +6,7 @@ part of 'ability.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+// ignore: non_constant_identifier_names
 _$_Abilities _$_$_AbilitiesFromJson(Map<String, dynamic> json) {
   return _$_Abilities(
     type: json['type'] as String,
@@ -17,6 +18,7 @@ _$_Abilities _$_$_AbilitiesFromJson(Map<String, dynamic> json) {
   );
 }
 
+// ignore: non_constant_identifier_names
 Map<String, dynamic> _$_$_AbilitiesToJson(_$_Abilities instance) =>
     <String, dynamic>{
       'type': instance.type,

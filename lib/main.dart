@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:valorant/pages/characterList.dart';
+import 'ui/pages/characterList.dart';
 
 void main() {
   runApp(MyApp());

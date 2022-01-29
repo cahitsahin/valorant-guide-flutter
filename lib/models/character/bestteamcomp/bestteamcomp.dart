@@ -1,7 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:flutter/material.dart';
-
-
 part 'bestteamcomp.freezed.dart';
 part 'bestteamcomp.g.dart';
 

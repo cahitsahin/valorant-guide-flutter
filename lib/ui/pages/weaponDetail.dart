@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:valorant/models/weapon/weapon/weapon.dart';
 import 'package:valorant/services/style.dart';
-import 'package:valorant/widgets/characterWidget.dart';
+import 'package:valorant/ui/widgets/characterWidget.dart';
 
 class WeaponDetailScreen extends StatefulWidget {
   final Weapon weapon;

@@ -30,9 +30,9 @@ class _MapsListState extends State<MapsList> {
       ),
       body: FutureBuilder(
         future: MapsData().readJsonObject(),
-        builder: (context, AsyncSnapshot<List<dynamic>> snapshot) {
+        builder: (context, AsyncSnapshot<List<Maps>> snapshot) {
           if (snapshot.hasData) {
-            allMaps = snapshot.data?[0];
+            allMaps = snapshot.data!;
             return Padding(
               padding: const EdgeInsets.only(
                   top: 8.0, left: 8, right: 8, bottom: 48),

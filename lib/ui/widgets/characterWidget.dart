@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:valorant/models/character/character/characters.dart';
 import 'package:valorant/models/weapon/weapon/weapon.dart';
-import 'package:valorant/pages/characterDetail.dart';
 import 'package:valorant/services/style.dart';
+import 'package:valorant/ui/pages/characterDetail.dart';
 
 class CharacterWidget extends StatelessWidget {
   final Character character;
@@ -46,7 +46,7 @@ class CharacterWidget extends StatelessWidget {
           builder: (context, child) {
             double value =1;
             if(pageController.position.haveDimensions){
-              value = (pageController.page! - currentPage)!;
+              value = (pageController.page! - currentPage);
               value = (1-(value.abs()*0.6)).clamp(0.0,1.0);
             }
             return Stack(

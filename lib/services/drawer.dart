@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:valorant/pages/characterList.dart';
-import 'package:valorant/pages/mapsList.dart';
-import 'package:valorant/pages/weaponList.dart';
 import 'package:valorant/services/style.dart';
+import 'package:valorant/ui/pages/characterList.dart';
+import 'package:valorant/ui/pages/mapsList.dart';
+import 'package:valorant/ui/pages/weaponList.dart';
 
 class AppDrawer extends StatelessWidget {
   @override

@@ -3,7 +3,7 @@
     "type": "Sidearm",
     "description": "Valorant Classic is a Sidearm weapon type and costs Free credits to purchase. This gun has a magazine capacity of 12, and fire rate of 6.75 / 2.22 per second, with a Low wall penetration. If the enemy has no armor, you will deal 78 Head Damage, 26 Torso Damage, and 22 Leg/Arm Damage per bullet",
     "key": "Classic",
-    "fireModes":[
+    "fireModes": [
       {
         "name": "Semi-Auto",
         "rate": "6.75"
@@ -34,58 +34,53 @@
         "leg": "18"
       }
     ],
-    "otherSkin": [
-      "assets/images/weaponSkins/Classic_Dynasty.png"
-    ]
-  }, {
-  "type": "Sidearm",
-  "description": "Valorant Shorty is a Sidearm weapon type and costs 200 credits to purchase. This gun has a magazine capacity of 2, and fire rate of 3.3 per second, with a Low wall penetration. If the enemy has no armor, you will deal 36 Head Damage, 12 Torso Damage, and 10 Leg/Arm Damage per bullet\n",
-  "key": "Shorty",
-  "fireModes":[
-    {
-      "name": "Semi-Auto",
-      "rate": "3.3"
-    }
-  ],
-  "imagePath": "assets/images/weaponImages/Shorty.png",
-  "cost": "200",
-  "capacity": "7",
-  "rate": "3.3",
-  "wallPenetration": "Medium",
-  "primaryColor": "FF4b636e",
-  "secondaryColor": "FFa7c0cd",
-  "distanceRate": [
-    {
-      "distance": "0-9m",
-      "head": "34",
-      "body": "17",
-      "leg": "14"
-    },
-    {
-      "distance": "9-15m",
-      "head": "26",
-      "body": "13",
-      "leg": "11"
-    },
-    {
-      "distance": "15-20m",
-      "head": "20",
-      "body": "10",
-      "leg": "9"
-    }
-  ],
-  "otherSkin": [
-    "assets/images/weaponSkins/Classic_Dynasty.png",
-    "daddy"
-  ]
-},
-
+    "otherSkin": ["assets/images/weaponSkins/Classic_Dynasty.png"]
+  },
+  {
+    "type": "Sidearm",
+    "description": "Valorant Shorty is a Sidearm weapon type and costs 200 credits to purchase. This gun has a magazine capacity of 2, and fire rate of 3.3 per second, with a Low wall penetration. If the enemy has no armor, you will deal 36 Head Damage, 12 Torso Damage, and 10 Leg/Arm Damage per bullet\n",
+    "key": "Shorty",
+    "fireModes": [
+      {
+        "name": "Semi-Auto",
+        "rate": "3.3"
+      }
+    ],
+    "imagePath": "assets/images/weaponImages/Shorty.png",
+    "cost": "200",
+    "capacity": "7",
+    "rate": "3.3",
+    "wallPenetration": "Medium",
+    "primaryColor": "FF4b636e",
+    "secondaryColor": "FFa7c0cd",
+    "distanceRate": [
+      {
+        "distance": "0-9m",
+        "head": "34",
+        "body": "17",
+        "leg": "14"
+      },
+      {
+        "distance": "9-15m",
+        "head": "26",
+        "body": "13",
+        "leg": "11"
+      },
+      {
+        "distance": "15-20m",
+        "head": "20",
+        "body": "10",
+        "leg": "9"
+      }
+    ],
+    "otherSkin": ["assets/images/weaponSkins/Classic_Dynasty.png", "daddy"]
+  },
 
   {
     "type": "Shotgun",
     "description": "Valorant Judge is a Shotgun weapon type and costs 1500 credits to purchase. This gun has a magazine capacity of 7, and fire rate of 3.5 per second, with a Medium wall penetration. If the enemy has no armor, you will deal 34 Head Damage, 17 Torso Damage, and 14 Leg/Arm Damage per bullet",
     "key": "Judge",
-    "fireModes":[
+    "fireModes": [
       {
         "name": "Semi-Auto",
         "rate": "3.5"
@@ -118,17 +113,16 @@
         "leg": "9"
       }
     ],
-    "otherSkin": [
-        "assets/images/weaponSkins/Classic_Dynasty.png"
-    ]
+    "otherSkin": ["assets/images/weaponSkins/Classic_Dynasty.png"]
   },
   {
     "type": "SMG",
     "description": "Valorant Spectre is a SMG weapon type and costs 1600 credits to purchase. This gun has a magazine capacity of 30, and fire rate of 13.33 / 12 per second, with a Medium wall penetration. If the enemy has no armor, you will deal 78 Head Damage, 26 Torso Damage, and 22 Leg/Arm Damage per bullet\n",
     "key": "Spectre",
-    "fireModes":[
+    "fireModes": [
       {
-
+        "name": "Semi-Auto",
+        "rate": "3.5"
       }
     ],
     "imagePath": "assets/images/weaponImages/Spectre.png",
