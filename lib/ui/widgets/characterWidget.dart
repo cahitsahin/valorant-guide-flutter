@@ -1,14 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:valorant/models/character/character/characters.dart';
-import 'package:valorant/models/weapon/weapon/weapon.dart';
 import 'package:valorant/services/style.dart';
 import 'package:valorant/ui/pages/characterDetail.dart';
 
 class CharacterWidget extends StatelessWidget {
   final Character character;
   final List<Character> characters;
-  final List<Weapon> weapons;
   final PageController pageController;
   final int currentPage;
 
@@ -17,7 +15,7 @@ class CharacterWidget extends StatelessWidget {
     required this.character,
     required this.pageController,
     required this.currentPage,
-    required this.weapons, required this.characters,
+    required this.characters,
   }) : super(key: key);
 
   @override
@@ -26,9 +24,7 @@ class CharacterWidget extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(40)
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
       elevation: 10,
       child: InkWell(
         onTap: () {
@@ -36,63 +32,66 @@ class CharacterWidget extends StatelessWidget {
             context,
             PageRouteBuilder(
               transitionDuration: Duration(milliseconds: 350),
-              pageBuilder: (context, _, __) =>
-                  CharacterDetailScreen(character: character, weapons: weapons,characters: characters,),
+              pageBuilder: (context, _, __) => CharacterDetailScreen(
+                character: character,
+                characters: characters,
+              ),
             ),
           );
         },
         child: AnimatedBuilder(
           animation: pageController,
           builder: (context, child) {
-            double value =1;
-            if(pageController.position.haveDimensions){
+            double value = 1;
+            if (pageController.position.haveDimensions) {
               value = (pageController.page! - currentPage);
-              value = (1-(value.abs()*0.6)).clamp(0.0,1.0);
+              value = (1 - (value.abs() * 0.6)).clamp(0.0, 1.0);
             }
             return Stack(
               children: [
                 Align(
                   alignment: Alignment.topLeft,
                   child: Padding(
-                    padding: const EdgeInsets.only(top:8.0),
+                    padding: const EdgeInsets.only(top: 8.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
                         CircleAvatar(
-                          backgroundColor: getColorFromHex(character.primaryColor),
-                          child: Image.asset(
-                            character.abilities[0].imagePath,
-                            color: Colors.white,
-                            height: 35
-                          ),
-                          radius: 25*value,
+                          backgroundColor:
+                              getColorFromHex(character.primaryColor),
+                          child: Image.asset(character.abilities[0].imagePath,
+                              color: Colors.white, height: 35),
+                          radius: 25 * value,
                         ),
                         CircleAvatar(
-                          backgroundColor: getColorFromHex(character.primaryColor),
+                          backgroundColor:
+                              getColorFromHex(character.primaryColor),
                           child: Image.asset(
                             character.abilities[1].imagePath,
                             color: Colors.white,
                             height: 35,
                           ),
-                          radius: 25*value,
+                          radius: 25 * value,
                         ),
                         CircleAvatar(
-                          backgroundColor: getColorFromHex(character.primaryColor),
+                          backgroundColor:
+                              getColorFromHex(character.primaryColor),
                           child: Image.asset(
                             character.abilities[2].imagePath,
                             color: Colors.white,
                             height: 35,
                           ),
-                          radius: 25*value,
+                          radius: 25 * value,
                         ),
                         CircleAvatar(
-                          backgroundColor: getColorFromHex(character.primaryColor),
+                          backgroundColor:
+                              getColorFromHex(character.primaryColor),
                           child: Image.asset(
                             character.abilities[3].imagePath,
                             color: Colors.white,
                             height: 35,
                           ),
-                          radius: 25*value,
+                          radius: 25 * value,
                         ),
                       ],
                     ),
@@ -109,7 +108,10 @@ class CharacterWidget extends StatelessWidget {
                         width: 0.9 * screenWidth,
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
-                            colors: [getColorFromHex(character.secondaryColor),getColorFromHex(character.primaryColor)],
+                            colors: [
+                              getColorFromHex(character.secondaryColor),
+                              getColorFromHex(character.primaryColor)
+                            ],
                             begin: Alignment.topRight,
                             end: Alignment.bottomLeft,
                           ),
@@ -124,7 +126,7 @@ class CharacterWidget extends StatelessWidget {
                     alignment: Alignment(0, -0.5),
                     child: Image.asset(
                       character.imagePath,
-                      height: screenHeight * 0.55*value,
+                      height: screenHeight * 0.55 * value,
                     ),
                   ),
                 ),
@@ -169,8 +171,8 @@ Color getColorFromHex(String hexColor) {
   }
   if (hexColor.length == 8) {
     return Color(int.parse("0x$hexColor"));
-  }
-  else return Colors.red;
+  } else
+    return Colors.red;
 }
 
 class CharacterCardBackgroundClipper extends CustomClipper<Path> {

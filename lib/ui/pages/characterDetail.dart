@@ -10,9 +10,9 @@ import 'package:valorant/ui/widgets/characterWidget.dart';
 class CharacterDetailScreen extends StatefulWidget {
   final Character character;
   final List<Character> characters;
-  final List<Weapon> weapons;
 
-  CharacterDetailScreen({Key? key, required this.character, required this.weapons, required this.characters})
+  CharacterDetailScreen(
+      {Key? key, required this.character, required this.characters})
       : super(key: key);
 
   @override
@@ -22,15 +22,14 @@ class CharacterDetailScreen extends StatefulWidget {
 class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
   late List<Weapon> favouriteWeapons;
   late List<Character> favouriteTeams;
-
+  List<Weapon> _weapons = [];
 
   @override
   void initState() {
     super.initState();
     favouriteWeapons = <Weapon>[];
     favouriteTeams = <Character>[];
-    getFavouriteWeapons();
-    for(int i = 0;i<widget.character.bestTeamComp.length;i++){
+    for (int i = 0; i < widget.character.bestTeamComp.length; i++) {
       getFavouriteTeams(i);
     }
   }
@@ -163,7 +162,7 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                 ),
                 Container(
                   width: screenWidth,
-                  height: screenHeight*0.2,
+                  height: screenHeight * 0.2,
                   child: ListView.builder(
                       scrollDirection: Axis.horizontal,
                       itemCount: favouriteTeams.length,
@@ -172,10 +171,11 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                         return Padding(
                           padding: const EdgeInsets.only(bottom: 20),
                           child: CharacterTeamWidget(
-                              team: favouriteTeams,
-                              character: widget.character,
-                              screenHeight: screenHeight,
-                              screenWidth: screenWidth,),
+                            team: favouriteTeams,
+                            character: widget.character,
+                            screenHeight: screenHeight,
+                            screenWidth: screenWidth,
+                          ),
                         );
                       }),
                 ),
@@ -226,18 +226,20 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
   }
 
   void getFavouriteWeapons() {
-    for (int i = 0; i < widget.weapons.length; i++) {
+    for (int i = 0; i < _weapons.length; i++) {
       for (int a = 0; a < widget.character.bestWeapon.length; a++) {
-        if (widget.weapons[i].key.contains(widget.character.bestWeapon[a])) {
-          favouriteWeapons.add(widget.weapons[i]);
+        if (_weapons[i].key.contains(widget.character.bestWeapon[a])) {
+          favouriteWeapons.add(_weapons[i]);
         }
       }
     }
   }
+
   void getFavouriteTeams(int index) {
     for (int i = 0; i < widget.characters.length; i++) {
       for (int a = 0; a < widget.character.bestTeamComp.length; a++) {
-        if (widget.characters[i].key.contains(widget.character.bestTeamComp[index].names[a])) {
+        if (widget.characters[i].key
+            .contains(widget.character.bestTeamComp[index].names[a])) {
           favouriteTeams.add(widget.characters[i]);
         }
       }
